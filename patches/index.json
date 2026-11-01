@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "generated": "2026-11-01T16:53:37+08:00",
+  "generated": "2026-11-01T17:20:53+08:00",
   "base": "https://fastly.jsdelivr.net/gh/AUXUWA/OX-1-scores/patches/",
   "patches": [
     {
@@ -242,54 +242,6 @@
       "fb": 0,
       "bytes": 1310,
       "sha256": "bef681751a6f1d21fe4e7fd831c53272a8e00c45376fea8201bbe95839284929"
-    },
-    {
-      "file": "ab_bright.json",
-      "name": "对照试听 bright（同一段音乐 × 本地音色）",
-      "kind": "ab",
-      "board_id": null,
-      "algo": null,
-      "fb": null,
-      "ab_tracks": [
-        "玻璃领奏",
-        "弦乐·緊",
-        "马林巴",
-        "金属·雨滴"
-      ],
-      "bytes": 21516,
-      "sha256": "43fa567f15bb233bc4606a6715027b27ca8936b0ef597d7af396425fa8453e5e"
-    },
-    {
-      "file": "ab_mellow.json",
-      "name": "对照试听 mellow（同一段音乐 × 本地音色）",
-      "kind": "ab",
-      "board_id": null,
-      "algo": null,
-      "fb": null,
-      "ab_tracks": [
-        "电钢·暖芯",
-        "和声人声",
-        "指贝斯·圆",
-        "铜锣·闷"
-      ],
-      "bytes": 21534,
-      "sha256": "f29f642eb8664bf6a1dc31d9fe1a0116e37aca23254b184e64735dcad0a19ff5"
-    },
-    {
-      "file": "ab_metal.json",
-      "name": "对照试听 metal（同一段音乐 × 本地音色）",
-      "kind": "ab",
-      "board_id": null,
-      "algo": null,
-      "fb": null,
-      "ab_tracks": [
-        "先锋领奏·尖",
-        "合唱人声·暗",
-        "马林巴",
-        "Dinger 钟琴"
-      ],
-      "bytes": 21548,
-      "sha256": "6bd4e0fa4ed9f21d77f7bd3a061f7068a1a8ee7d58188451d056cdb92593834c"
     }
   ]
 }

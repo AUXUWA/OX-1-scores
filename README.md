@@ -136,8 +136,27 @@ App 拉取时按这个顺序试（2026-11-01 本机实测；`raw.githubuserconte
 > | `.../OX-1-scores@<commit>/index.json` | v2 / 26 首（新，但每次发布都得改 URL）|
 > | `.../OX-1-scores@v2/...`（非 semver tag）| 主文件 200，**子路径 404** ⇒ 不可用 |
 >
-> ⇒ 规则：**App 与两个生成器（`make_scores_index.py` / `make_patches_index.py`）一律用「无版本号」URL**，
-> 并在 **index 请求上追加 `?cb=<时间戳>`**（已实测能拿到新内容）；单曲/音色文件走 `base + file`，base 同样无版本号。
+> ⇒ 规则：**App 与两个生成器（`make_scores_index.py` / `make_patches_index.py`）一律用「无版本号」URL**；
+> 单曲/音色文件走 `base + file`，base 同样无版本号。
+>
+> ★ **更正（同日复测，别信我上一版的话）**：`?cb=<时间戳>` 这类缓存破坏参数**对 jsDelivr 无效** ——
+> 同一 URL 加随机 cb 仍然返回旧内容（我第一次判断"能拿到新内容"是单点观测，复测即被推翻）。
+> ⇒ 若要求「推送后**立刻**可读」，只有两条路：
+> ① `@<commit>` 形态（不可变引用，必然是新内容，但每次发布都要改 URL）；
+> ② **GitHub Pages**：`https://auxuwa.github.io/OX-1-scores/`（直接从仓里按字节服务，不经 jsDelivr 缓存）。
+> jsDelivr 的「无版本号」URL 只是**比 `@main` 新鲜**，仍可能有分钟级到小时级延迟 —— 不要把它当"实时"。
+>
+> ★★ **GitHub Pages 已启用并实测可用（2026-11-01）**：`https://auxuwa.github.io/OX-1-scores/`
+> —— 直读仓库、**不经 jsDelivr 缓存**，所以"刚推的立刻能拿到"只有这条路靠得住。
+> 实测：`index.json` 200（v2/26）· `patches/index.json` 200 · `patches/local_new/Dinger%20钟琴.json` 200
+> （**须 URL 编码**）· `guide_canon/score.txt` 200（子目录形式）；
+> 速度与 jsDelivr 同量级（`index.json` 各 3 次：Pages 0.71/0.76/1.43 s vs jsDelivr 0.76/1.05/1.75 s）。
+> ★ 例外：`preview.wav` 单首约 1.3 MB，Pages 实测 **25 s** ⇒ App 试听必须懒加载，不要默认下载。
+>
+> ⇒ App 的 index 拉取顺序应为：**Pages 首选** → fastly → gcore → testingcf → raw（兜底）；
+> 曲谱/音色**内容文件仍走 `base`（jsDelivr）**，因为它路径新、不受分支缓存影响。
+> ⚠ Pages 首次构建踩过：`pages/builds/latest` 报 `status=building` 且 `duration=0` 卡了 25 分钟，
+> `POST /repos/{owner}/{repo}/pages/builds` 重新触发后 21.9 s 完成 ⇒ 卡住就重触发，别干等。
 > 更阴的一点：`@main` 下被**删除**的旧文件会立刻 404，而没变的文件仍是旧内容 —— 新旧混合最难查，
 > 这正是必须避开 `@main` 的原因。
 
