@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "generated": "2026-11-01T16:45:27+08:00",
-  "base": "https://fastly.jsdelivr.net/gh/AUXUWA/OX-1-scores@main/patches/",
+  "generated": "2026-11-01T16:53:37+08:00",
+  "base": "https://fastly.jsdelivr.net/gh/AUXUWA/OX-1-scores/patches/",
   "patches": [
     {
       "file": "board_0.json",

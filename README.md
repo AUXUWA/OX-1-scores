@@ -113,14 +113,33 @@ App 拉取时按这个顺序试（2026-11-01 本机实测；`raw.githubuserconte
 
 | 顺序 | 地址 | 实测 |
 | :--- | :--- | :--- |
-| 1（首选）| `https://fastly.jsdelivr.net/gh/AUXUWA/OX-1-scores@main/index.json` | **HTTP 200 / 0.7 s** |
-| 2 | `https://gcore.jsdelivr.net/gh/AUXUWA/OX-1-scores@main/index.json` | **HTTP 200 / 1.1 s** |
-| 3 | `https://testingcf.jsdelivr.net/gh/AUXUWA/OX-1-scores@main/index.json` | **HTTP 200 / 2.0 s** |
-| 4 | `https://cdn.jsdelivr.net/gh/AUXUWA/OX-1-scores@main/index.json` | HTTP 000（本机不通）|
+| 1（首选）| `https://fastly.jsdelivr.net/gh/AUXUWA/OX-1-scores/index.json` | **HTTP 200 / 0.7 s** |
+| 2 | `https://gcore.jsdelivr.net/gh/AUXUWA/OX-1-scores/index.json` | **HTTP 200 / 1.1 s** |
+| 3 | `https://testingcf.jsdelivr.net/gh/AUXUWA/OX-1-scores/index.json` | **HTTP 200 / 2.0 s** |
+| 4 | `https://cdn.jsdelivr.net/gh/AUXUWA/OX-1-scores/index.json` | HTTP 000（本机不通）|
 | 5（兜底）| `https://raw.githubusercontent.com/AUXUWA/OX-1-scores/main/index.json` | **HTTP 000（被 reset）** |
 
 单首曲谱 = `base + file`，例如
-`https://fastly.jsdelivr.net/gh/AUXUWA/OX-1-scores@main/guide_two_tigers.txt`。
+`https://fastly.jsdelivr.net/gh/AUXUWA/OX-1-scores/guide_two_tigers.txt`。
+
+> ★★ **不要用 `@main`**（2026-11-01 实测教训，代价是一次 App 全挂）：
+> jsDelivr 的 `@main` **不是「当前 main」** —— 它把「分支 → commit」的解析结果缓存最长 **12 小时**。
+> `purge.jsdelivr.net` 清文件路径（`.../@main/index.json`）与分支级（`.../@main`）**都清不掉它**：
+> 两者都返回 `status: finished`，内容仍然是旧的。
+>
+> 同一次推送后的实测对照（同一时刻、同一台机器）：
+>
+> | URL 形态 | `index.json` 实际内容 |
+> | :--- | :--- |
+> | `.../OX-1-scores@main/index.json` | **v1 / 13 首（旧）** ← 陷阱 |
+> | `.../OX-1-scores/index.json`（无版本号）| **v2 / 26 首（新）** ← 正确 |
+> | `.../OX-1-scores@<commit>/index.json` | v2 / 26 首（新，但每次发布都得改 URL）|
+> | `.../OX-1-scores@v2/...`（非 semver tag）| 主文件 200，**子路径 404** ⇒ 不可用 |
+>
+> ⇒ 规则：**App 与两个生成器（`make_scores_index.py` / `make_patches_index.py`）一律用「无版本号」URL**，
+> 并在 **index 请求上追加 `?cb=<时间戳>`**（已实测能拿到新内容）；单曲/音色文件走 `base + file`，base 同样无版本号。
+> 更阴的一点：`@main` 下被**删除**的旧文件会立刻 404，而没变的文件仍是旧内容 —— 新旧混合最难查，
+> 这正是必须避开 `@main` 的原因。
 
 > ★ 为什么单独建一个**公开**仓：主仓是**私有**的，jsDelivr / Pages 都不服务私有仓
 > （实测：私有仓的 CDN 请求一律 301 跳去 `raw.githubusercontent.com`，然后被 reset）。
