@@ -1,0 +1,137 @@
+{
+  "v": 1,
+  "generated": "2026-11-01T10:37:57+08:00",
+  "base": "https://fastly.jsdelivr.net/gh/AUXUWA/OX-1-scores@main/",
+  "songs": [
+    {
+      "file": "guide_drunken_sailor.txt",
+      "name": "Drunken Sailor（醉汉水手）",
+      "group": "单轨指引",
+      "preset": 2,
+      "note": "preset 2 拨弦 · 136 步",
+      "total_steps": 136,
+      "events": 24,
+      "notes": 24
+    },
+    {
+      "file": "guide_greensleeves.txt",
+      "name": "Greensleeves（绿袖子）",
+      "group": "单轨指引",
+      "preset": 5,
+      "note": "preset 5 Supersaw · 96 步",
+      "total_steps": 96,
+      "events": 19,
+      "notes": 19
+    },
+    {
+      "file": "guide_two_tigers.txt",
+      "name": "两只老虎（Frère Jacques）",
+      "group": "单轨指引",
+      "preset": 4,
+      "note": "preset 4 管风琴 · 128 步",
+      "total_steps": 128,
+      "events": 28,
+      "notes": 28
+    },
+    {
+      "file": "guide_canon.txt",
+      "name": "卡农（主题）",
+      "group": "单轨指引",
+      "preset": 0,
+      "note": "preset 0 羽管键琴 · 160 步",
+      "total_steps": 160,
+      "events": 40,
+      "notes": 40
+    },
+    {
+      "file": "guide_minuet.txt",
+      "name": "小步舞曲（BWV Anh.114）",
+      "group": "单轨指引",
+      "preset": 0,
+      "note": "preset 0 羽管键琴 · 128 步",
+      "total_steps": 128,
+      "events": 32,
+      "notes": 32
+    },
+    {
+      "file": "guide_fur_elise.txt",
+      "name": "致爱丽丝（主题）",
+      "group": "单轨指引",
+      "preset": 1,
+      "note": "preset 1 电钢琴 · 128 步",
+      "total_steps": 128,
+      "events": 26,
+      "notes": 26
+    },
+    {
+      "file": "guide_moli_hua.txt",
+      "name": "茉莉花（江南民歌）",
+      "group": "单轨指引",
+      "preset": 6,
+      "note": "preset 6 弦乐群 · 152 步",
+      "total_steps": 152,
+      "events": 67,
+      "notes": 67
+    },
+    {
+      "file": "guide_jingle_bells.txt",
+      "name": "铃儿响叮当",
+      "group": "单轨指引",
+      "preset": 7,
+      "note": "preset 7 钟 · 172 步",
+      "total_steps": 172,
+      "events": 34,
+      "notes": 34
+    },
+    {
+      "file": "china_4x32.txt",
+      "name": "中国风 China（五声音阶，4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 19,
+      "notes": 33
+    },
+    {
+      "file": "experimental_4x32.txt",
+      "name": "实验 Experimental（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 30,
+      "notes": 48
+    },
+    {
+      "file": "ambient_4x32.txt",
+      "name": "氛围 Ambient（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 10,
+      "notes": 12
+    },
+    {
+      "file": "pop_4x32.txt",
+      "name": "流行 Pop（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 32,
+      "notes": 89
+    },
+    {
+      "file": "orchestral_4x32.txt",
+      "name": "管弦 Orchestral（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 16,
+      "notes": 29
+    }
+  ]
+}
