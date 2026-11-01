@@ -1,0 +1,53 @@
+{
+  "slug": "cinematic_chase_4x32",
+  "name": "追猎 Chase（4 轨 × 32 步）",
+  "style": "cinematic",
+  "step_ms": 125,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "金属打击·树形",
+      "patch": 3,
+      "patch_name": "金属打击·树形",
+      "role": "ostinato（每 2 步一击）"
+    },
+    {
+      "index": 1,
+      "name": "弦乐群",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "半音爬升（每 4 步 +1 半音）"
+    },
+    {
+      "index": 2,
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "低音脉冲（D/E 长音）"
+    },
+    {
+      "index": 3,
+      "name": "钟",
+      "patch": 7,
+      "patch_name": "钟",
+      "role": "悬念点（第 12/28 步）"
+    }
+  ],
+  "events": 16,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

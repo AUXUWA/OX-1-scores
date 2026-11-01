@@ -1,0 +1,53 @@
+{
+  "slug": "orchestral_march_4x32",
+  "name": "进行曲 March（4 轨 × 32 步）",
+  "style": "orchestral",
+  "step_ms": 140,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "弦乐群",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "主旋律（步进式级进）"
+    },
+    {
+      "index": 1,
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "和声垫（全音符和弦）"
+    },
+    {
+      "index": 2,
+      "name": "拨弦",
+      "patch": 2,
+      "patch_name": "拨弦",
+      "role": "低音拨奏（每 2 步一记）"
+    },
+    {
+      "index": 3,
+      "name": "金属打击·树形",
+      "patch": 3,
+      "patch_name": "金属打击·树形",
+      "role": "重拍打击（0/8/16/24）"
+    }
+  ],
+  "events": 16,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

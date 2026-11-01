@@ -1,0 +1,69 @@
+{
+  "format": "ox1-patch-designer-presets 1",
+  "local_name": "管风琴·主音栓",
+  "algo": 4,
+  "fb": 0,
+  "percussive": false,
+  "timbre": "明亮、齐奏感、管风琴主栓",
+  "desc": "algo4 全并联但 4 个音栓响度重排（8'+4'+2'+1'），EGT=1：管风琴主音栓独奏",
+  "ops": [
+    {
+      "tl": 14,
+      "ar": 9,
+      "dr": 0,
+      "sl": 0,
+      "rr": 0,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 20,
+      "ar": 9,
+      "dr": 0,
+      "sl": 0,
+      "rr": 0,
+      "mult": 2,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 24,
+      "ar": 9,
+      "dr": 0,
+      "sl": 0,
+      "rr": 0,
+      "mult": 4,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 28,
+      "ar": 9,
+      "dr": 0,
+      "sl": 0,
+      "rr": 0,
+      "mult": 8,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    }
+  ],
+  "local_id": "管风琴·主音栓",
+  "//": "本地音色（**无 board_id**，不进 patch_bank.v）—— 用它渲染时曲谱轨写 \"patch_local\": \"管风琴·主音栓\"。需 rtl 落进 patch_bank.v + 扩 preset 位宽（现 3 bit/8 套）才能上板。"
+}

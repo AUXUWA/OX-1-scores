@@ -1,0 +1,53 @@
+{
+  "slug": "orchestral_4x32",
+  "name": "管弦 Orchestral（4 轨 × 32 步）",
+  "style": "orchestral",
+  "step_ms": 150,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "弦乐群",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "主旋律（4 步一个乐句，legato）"
+    },
+    {
+      "index": 1,
+      "name": "拨弦",
+      "patch": 2,
+      "patch_name": "拨弦",
+      "role": "八分音符琶音拨奏（根-五-三-五）"
+    },
+    {
+      "index": 2,
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "管乐低音（每和弦一个长音）"
+    },
+    {
+      "index": 3,
+      "name": "金属打击",
+      "patch": 3,
+      "patch_name": "金属打击·树形",
+      "role": "定音鼓（强拍 + 次强拍）"
+    }
+  ],
+  "events": 16,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "china_4x32",
+  "name": "中国风 China（五声音阶，4 轨 × 32 步）",
+  "style": "china",
+  "step_ms": 150,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "笛",
+      "patch": 0,
+      "patch_name": "羽管键琴",
+      "role": "主旋律（五声，长音 + 装饰）"
+    },
+    {
+      "index": 1,
+      "name": "古筝",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "古筝式分解（宫-商-角-徵）"
+    },
+    {
+      "index": 2,
+      "name": "低音",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "低音（宫-徵-羽-商）"
+    },
+    {
+      "index": 3,
+      "name": "磬",
+      "patch": 7,
+      "patch_name": "钟",
+      "role": "点缀（一记一记，不成拍）"
+    }
+  ],
+  "events": 19,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

@@ -1,10 +1,11 @@
 {
-  "v": 1,
-  "generated": "2026-11-01T10:37:57+08:00",
+  "v": 2,
+  "generated": "2026-11-01T15:30:00+08:00",
   "base": "https://fastly.jsdelivr.net/gh/AUXUWA/OX-1-scores@main/",
   "songs": [
     {
-      "file": "guide_drunken_sailor.txt",
+      "file": "guide_drunken_sailor/score.txt",
+      "dir": "guide_drunken_sailor/",
       "name": "Drunken Sailor（醉汉水手）",
       "group": "单轨指引",
       "preset": 2,
@@ -14,7 +15,8 @@
       "notes": 24
     },
     {
-      "file": "guide_greensleeves.txt",
+      "file": "guide_greensleeves/score.txt",
+      "dir": "guide_greensleeves/",
       "name": "Greensleeves（绿袖子）",
       "group": "单轨指引",
       "preset": 5,
@@ -24,7 +26,8 @@
       "notes": 19
     },
     {
-      "file": "guide_two_tigers.txt",
+      "file": "guide_two_tigers/score.txt",
+      "dir": "guide_two_tigers/",
       "name": "两只老虎（Frère Jacques）",
       "group": "单轨指引",
       "preset": 4,
@@ -34,7 +37,8 @@
       "notes": 28
     },
     {
-      "file": "guide_canon.txt",
+      "file": "guide_canon/score.txt",
+      "dir": "guide_canon/",
       "name": "卡农（主题）",
       "group": "单轨指引",
       "preset": 0,
@@ -44,7 +48,8 @@
       "notes": 40
     },
     {
-      "file": "guide_minuet.txt",
+      "file": "guide_minuet/score.txt",
+      "dir": "guide_minuet/",
       "name": "小步舞曲（BWV Anh.114）",
       "group": "单轨指引",
       "preset": 0,
@@ -54,7 +59,8 @@
       "notes": 32
     },
     {
-      "file": "guide_fur_elise.txt",
+      "file": "guide_fur_elise/score.txt",
+      "dir": "guide_fur_elise/",
       "name": "致爱丽丝（主题）",
       "group": "单轨指引",
       "preset": 1,
@@ -64,7 +70,8 @@
       "notes": 26
     },
     {
-      "file": "guide_moli_hua.txt",
+      "file": "guide_moli_hua/score.txt",
+      "dir": "guide_moli_hua/",
       "name": "茉莉花（江南民歌）",
       "group": "单轨指引",
       "preset": 6,
@@ -74,7 +81,8 @@
       "notes": 67
     },
     {
-      "file": "guide_jingle_bells.txt",
+      "file": "guide_jingle_bells/score.txt",
+      "dir": "guide_jingle_bells/",
       "name": "铃儿响叮当",
       "group": "单轨指引",
       "preset": 7,
@@ -84,7 +92,41 @@
       "notes": 34
     },
     {
-      "file": "china_4x32.txt",
+      "file": "demo_camfg_4x32/score.txt",
+      "dir": "demo_camfg_4x32/",
+      "name": "C–Am–F–G 4 轨演示曲",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 32,
+      "notes": 85
+    },
+    {
+      "file": "ode_to_joy_piano_rests/score.txt",
+      "dir": "ode_to_joy_piano_rests/",
+      "name": "《欢乐颂》单轨纯旋律（**连续步号 / 休止步已物化**）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "256 步",
+      "total_steps": 256,
+      "events": 256,
+      "notes": 256
+    },
+    {
+      "file": "ode_to_joy_piano/score.txt",
+      "dir": "ode_to_joy_piano/",
+      "name": "《欢乐颂》单轨纯旋律（C 大调）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "256 步",
+      "total_steps": 256,
+      "events": 62,
+      "notes": 62
+    },
+    {
+      "file": "china_4x32/score.txt",
+      "dir": "china_4x32/",
       "name": "中国风 China（五声音阶，4 轨 × 32 步）",
       "group": "四轨合奏",
       "preset": null,
@@ -94,7 +136,30 @@
       "notes": 33
     },
     {
-      "file": "experimental_4x32.txt",
+      "file": "waltz_danube_4x32/score.txt",
+      "dir": "waltz_danube_4x32/",
+      "name": "多瑙河圆舞曲风（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 21,
+      "notes": 39
+    },
+    {
+      "file": "synthwave_nightdrive_4x32/score.txt",
+      "dir": "synthwave_nightdrive_4x32/",
+      "name": "夜驰 Synthwave（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 24,
+      "notes": 44
+    },
+    {
+      "file": "experimental_4x32/score.txt",
+      "dir": "experimental_4x32/",
       "name": "实验 Experimental（4 轨 × 32 步）",
       "group": "四轨合奏",
       "preset": null,
@@ -104,7 +169,30 @@
       "notes": 48
     },
     {
-      "file": "ambient_4x32.txt",
+      "file": "experimental_block_4x32/score.txt",
+      "dir": "experimental_block_4x32/",
+      "name": "实验音块 Block（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 16,
+      "notes": 24
+    },
+    {
+      "file": "pop_funk_4x32/score.txt",
+      "dir": "pop_funk_4x32/",
+      "name": "放克 Funk（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 19,
+      "notes": 49
+    },
+    {
+      "file": "ambient_4x32/score.txt",
+      "dir": "ambient_4x32/",
       "name": "氛围 Ambient（4 轨 × 32 步）",
       "group": "四轨合奏",
       "preset": null,
@@ -114,7 +202,8 @@
       "notes": 12
     },
     {
-      "file": "pop_4x32.txt",
+      "file": "pop_4x32/score.txt",
+      "dir": "pop_4x32/",
       "name": "流行 Pop（4 轨 × 32 步）",
       "group": "四轨合奏",
       "preset": null,
@@ -124,7 +213,30 @@
       "notes": 89
     },
     {
-      "file": "orchestral_4x32.txt",
+      "file": "ambient_deep_space_4x32/score.txt",
+      "dir": "ambient_deep_space_4x32/",
+      "name": "深空 Ambient（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 8,
+      "notes": 14
+    },
+    {
+      "file": "jazz_lounge_4x32/score.txt",
+      "dir": "jazz_lounge_4x32/",
+      "name": "爵士漫步 Lounge（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 18,
+      "notes": 53
+    },
+    {
+      "file": "orchestral_4x32/score.txt",
+      "dir": "orchestral_4x32/",
       "name": "管弦 Orchestral（4 轨 × 32 步）",
       "group": "四轨合奏",
       "preset": null,
@@ -132,6 +244,50 @@
       "total_steps": 32,
       "events": 16,
       "notes": 29
+    },
+    {
+      "file": "china_moli_var_4x32/score.txt",
+      "dir": "china_moli_var_4x32/",
+      "name": "茉莉变奏（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 14,
+      "notes": 25
+    },
+    {
+      "file": "lofi_sunset_4x32/score.txt",
+      "dir": "lofi_sunset_4x32/",
+      "name": "落日 Lo-fi（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 13,
+      "notes": 26
+    },
+    {
+      "file": "orchestral_march_4x32/score.txt",
+      "dir": "orchestral_march_4x32/",
+      "name": "进行曲 March（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 16,
+      "notes": 37
+    },
+    {
+      "file": "cinematic_chase_4x32/score.txt",
+      "dir": "cinematic_chase_4x32/",
+      "name": "追猎 Chase（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 16,
+      "notes": 28
     }
   ]
 }

@@ -1,0 +1,98 @@
+{
+  "//": "与 mega60k/rtl/top/patch_bank.v 逐比特一致，勿改（真源=presets.json board_id=3，audit_presets.py --check-bank 守门）",
+  "name": "金属打击·树形",
+  "status": "draft",
+  "tags": [
+    "打击",
+    "全音区",
+    "衰减",
+    "金属",
+    "板级"
+  ],
+  "desc": "algo3：op0→op1、op1+2→op3；载波 op[3]。。\nop3 载波 1×(正弦) A13/D7/S15/R15 SL=0x0F ⇒ 衰减到数字静音。\n实测：质心/f0 = 16.42、起音 4 ms、按住 40ms 掉到 −40dB 用 197 ms。\n设计意图（人手写，可能滞后于上面这几行实测参数）：algo7 环形：四算子互调环（op3→op2→op1→op0→op3）＋高倍方波调制器，质心极高、谱接近噪声，是这引擎能给出的最\"金属\"的声音。",
+  "notes": "★ 本条的 notes 由 tools/patch_designer（fm_core.js 定点引擎）当场量出，`py tools/audit_presets.py` 可复算：\n电平：峰值 -22.8 dBFS（离 4 算子满载的结构上限 16336 还有 16.7 dB），RMS -42.0 dBFS，直流 -86 dBFS，削顶 0 个采样；\n时间：起音 4.0 ms，掉 12dB 39 ms，掉 40dB 197 ms，释音（松手后掉 40dB）0 ms，延音漂移 -65.6 dB；\n频谱：质心 3218 Hz（C/f0=16.42），谐波 h1..h4 = 0/-25/-21/-26 dB，起音窗 h1..h4 = 0/-28/-29/-23 dB，落在 f0 谐波列上的能量 48%，起音比延音亮 6.4 dB；\n参数：algo3，fnum=526/block=3（G3 196.0 Hz），载波 op[3]；调制器 op[0,1,2] 的静态 TL→index 6.86/8.16/8.16 rad（实际还要再乘衰减后的 egOut）；SL=0x0F 在本引擎是**数字静音**（op_out 恒 0），SL 每低一格 ≈ +3.0 dB 延音；RR≤4 衰减极慢（实测 RR=4 要 3.5s 才到静音），4 以上才是可用释音。\n形态：一次性（载波 EGT=0 + SL=0x0F ⇒ 按住也衰减到数字静音，实测末尾 200ms -120 dBFS）；客观评分：79.0/100（靶子画像「金属打击 / 工业 percussion」，判据见 tools/timbre_lab/profiles.js）；失分项 release=20 cenRatio=1",
+  "algo": 3,
+  "fb": 0,
+  "fnum": 702,
+  "block": 3,
+  "nts": 0,
+  "keyon": 1,
+  "key_on_at": 1,
+  "key_off_at": null,
+  "frames": 48000,
+  "fx": {
+    "en": 1,
+    "room": 3,
+    "damp": 12,
+    "wet": 3,
+    "spread": 1,
+    "width": 12,
+    "predelay": 0
+  },
+  "percussive": true,
+  "attack_ms": 4,
+  "carriers": [
+    3
+  ],
+  "f0_hz": 195.95,
+  "range": "G2~G4（本条按 G3 = 196.0 Hz 设计；TL→index 与 SL 都与音高无关，所以换八度不用重调，但 index 越大、f0 越高越接近混叠边界 β_max≈24414/f0−1）",
+  "ops": [
+    {
+      "tl": 12,
+      "ar": 15,
+      "dr": 11,
+      "sl": 10,
+      "rr": 8,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 18,
+      "ar": 15,
+      "dr": 8,
+      "sl": 10,
+      "rr": 8,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 0,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 12,
+      "ar": 15,
+      "dr": 10,
+      "sl": 12,
+      "rr": 12,
+      "mult": 4,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 6,
+      "ar": 15,
+      "dr": 6,
+      "sl": 13,
+      "rr": 7,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 0,
+      "vib": 0,
+      "trem": 1
+    }
+  ],
+  "board_id": 3
+}

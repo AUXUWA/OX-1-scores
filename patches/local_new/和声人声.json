@@ -1,0 +1,69 @@
+{
+  "format": "ox1-patch-designer-presets 1",
+  "local_name": "和声人声",
+  "algo": 4,
+  "fb": 0,
+  "percussive": false,
+  "timbre": "暖、人声感、合唱垫",
+  "desc": "algo4 + vib + 慢 AR：人声和声垫（啊——），三层微失谐",
+  "ops": [
+    {
+      "tl": 16,
+      "ar": 7,
+      "dr": 0,
+      "sl": 0,
+      "rr": 0,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 18,
+      "ar": 7,
+      "dr": 0,
+      "sl": 0,
+      "rr": 0,
+      "mult": 2,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 1,
+      "trem": 1
+    },
+    {
+      "tl": 20,
+      "ar": 7,
+      "dr": 0,
+      "sl": 0,
+      "rr": 0,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 22,
+      "ar": 7,
+      "dr": 0,
+      "sl": 0,
+      "rr": 0,
+      "mult": 3,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 1,
+      "trem": 1
+    }
+  ],
+  "local_id": "和声人声",
+  "//": "本地音色（**无 board_id**，不进 patch_bank.v）—— 用它渲染时曲谱轨写 \"patch_local\": \"和声人声\"。需 rtl 落进 patch_bank.v + 扩 preset 位宽（现 3 bit/8 套）才能上板。"
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "experimental_block_4x32",
+  "name": "实验音块 Block（4 轨 × 32 步）",
+  "style": "experimental",
+  "step_ms": 170,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "低音块（8 步长门平移）"
+    },
+    {
+      "index": 1,
+      "name": "弦乐群",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "中音块（错位半小节）"
+    },
+    {
+      "index": 2,
+      "name": "羽管键琴",
+      "patch": 0,
+      "patch_name": "羽管键琴",
+      "role": "中高音块（点状切分）"
+    },
+    {
+      "index": 3,
+      "name": "金属打击·树形",
+      "patch": 3,
+      "patch_name": "金属打击·树形",
+      "role": "高音闪烁（无规律重击）"
+    }
+  ],
+  "events": 16,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

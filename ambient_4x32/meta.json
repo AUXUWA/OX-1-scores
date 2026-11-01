@@ -1,0 +1,53 @@
+{
+  "slug": "ambient_4x32",
+  "name": "氛围 Ambient（4 轨 × 32 步）",
+  "style": "ambient",
+  "step_ms": 250,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "弦乐群",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "主铺底（每 8 步换一个和弦音）"
+    },
+    {
+      "index": 1,
+      "name": "羽管键琴",
+      "patch": 0,
+      "patch_name": "羽管键琴",
+      "role": "稀疏高音点缀（错位落在和弦尾部）"
+    },
+    {
+      "index": 2,
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "低音 drone（EGT=1 ⇒ 永续不衰减）"
+    },
+    {
+      "index": 3,
+      "name": "钟",
+      "patch": 7,
+      "patch_name": "钟",
+      "role": "远景一记（环形 FM，衰减快）"
+    }
+  ],
+  "events": 10,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "slug": "waltz_danube_4x32",
+  "name": "多瑙河圆舞曲风",
+  "style": "圆舞曲",
+  "step_ms": 190,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "name": "弦乐群",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "主旋律（圆舞曲乐句，3 步一拍）"
+    },
+    {
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "蹦嚓嚓（低音 + 和弦）"
+    },
+    {
+      "name": "拨弦",
+      "patch": 2,
+      "patch_name": "拨弦",
+      "role": "echo 琶音（每拍尾）"
+    },
+    {
+      "name": "钟",
+      "patch": 7,
+      "patch_name": "钟",
+      "role": "旋转高光（每 12 步）"
+    }
+  ],
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "duration_s": 8.08,
+  "peak": 12287.0,
+  "peak_dbfs": -8.52,
+  "rms_dbfs": -23.26,
+  "wav_bytes": 1578124,
+  "wav_md5": "18a95d5aa11adecc1f903d5578e30959",
+  "n_events": 265,
+  "clipped_samples": 0,
+  "mood": "河畔、旋转、优雅"
+}

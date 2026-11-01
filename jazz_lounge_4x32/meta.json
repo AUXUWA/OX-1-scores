@@ -1,0 +1,53 @@
+{
+  "slug": "jazz_lounge_4x32",
+  "name": "爵士漫步 Lounge（4 轨 × 32 步）",
+  "style": "jazz",
+  "step_ms": 160,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "walking bass（每 2 步一音）"
+    },
+    {
+      "index": 1,
+      "name": "电钢琴",
+      "patch": 1,
+      "patch_name": "电钢琴",
+      "role": "九和弦 comping（off-beat）"
+    },
+    {
+      "index": 2,
+      "name": "拨弦",
+      "patch": 2,
+      "patch_name": "拨弦",
+      "role": "切分答句"
+    },
+    {
+      "index": 3,
+      "name": "钟",
+      "patch": 7,
+      "patch_name": "钟",
+      "role": "高音点缀（即兴掉音）"
+    }
+  ],
+  "events": 18,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

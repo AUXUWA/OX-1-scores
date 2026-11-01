@@ -1,0 +1,97 @@
+{
+  "//": "与 mega60k/rtl/top/patch_bank.v 逐比特一致，勿改（真源=presets.json board_id=0，audit_presets.py --check-bank 守门）",
+  "name": "羽管键琴",
+  "status": "draft",
+  "tags": [
+    "键盘",
+    "中音",
+    "衰减",
+    "明亮"
+  ],
+  "desc": "algo0：op0→op1、op1→op2、op2→op3；载波 op[3]。。\nop3 载波 1×(正弦) A15/D5/S15/R8 SL=0x0F ⇒ 衰减到数字静音。\n实测：质心/f0 = 1.66、起音 1 ms、按住 40ms 掉到 −40dB 用 825 ms。\n设计意图（人手写，可能滞后于上面这几行实测参数）：algo2 双串：两条链的调制器都用 8×/12× 的高比 —— 边带簇落在 3.5/4.5/8.5…×f0，与整数倍 f0 错开，听起来就是\"羽管刮弦\"的颗粒感；两路都快速衰减，几乎没有延音。",
+  "notes": "★ 本条的 notes 由 tools/patch_designer（fm_core.js 定点引擎）当场量出，`py tools/audit_presets.py` 可复算：\n电平：峰值 -24.1 dBFS（离 4 算子满载的结构上限 16336 还有 18.1 dB），RMS -37.5 dBFS，直流 -90 dBFS，削顶 0 个采样；\n时间：起音 0.7 ms，掉 12dB 194 ms，掉 40dB 825 ms，释音（松手后掉 40dB）100 ms，延音漂移 -34.8 dB；\n频谱：质心 434 Hz（C/f0=1.66），谐波 h1..h4 = 0/-21/-17/-13 dB，起音窗 h1..h4 = 0/-23/-18/-16 dB，落在 f0 谐波列上的能量 100%，起音比延音亮 12.6 dB；\n参数：algo0，fnum=702/block=3（C4 261.5 Hz），载波 op[3]；调制器 op[0,1,2] 的静态 TL→index 2.43/8.16/4.86 rad（实际还要再乘衰减后的 egOut）；SL=0x0F 在本引擎是**数字静音**（op_out 恒 0），SL 每低一格 ≈ +3.0 dB 延音；RR≤4 衰减极慢（实测 RR=4 要 3.5s 才到静音），4 以上才是可用释音。\n形态：一次性（载波 EGT=0 + SL=0x0F ⇒ 按住也衰减到数字静音，实测末尾 200ms -120 dBFS）；客观评分：100.0/100（靶子画像「羽管键琴 / 大键琴」，判据见 tools/timbre_lab/profiles.js）；失分项 ",
+  "algo": 0,
+  "fb": 0,
+  "fnum": 702,
+  "block": 3,
+  "nts": 0,
+  "keyon": 1,
+  "key_on_at": 1,
+  "key_off_at": null,
+  "frames": 48000,
+  "fx": {
+    "en": 1,
+    "room": 2,
+    "damp": 11,
+    "wet": 2,
+    "spread": 1,
+    "width": 11,
+    "predelay": 0
+  },
+  "percussive": true,
+  "attack_ms": 0.7,
+  "carriers": [
+    3
+  ],
+  "f0_hz": 261.52,
+  "range": "C3~C5（本条按 C4 = 261.5 Hz 设计；TL→index 与 SL 都与音高无关，所以换八度不用重调，但 index 越大、f0 越高越接近混叠边界 β_max≈24414/f0−1）",
+  "ops": [
+    {
+      "tl": 16,
+      "ar": 15,
+      "dr": 12,
+      "sl": 6,
+      "rr": 9,
+      "mult": 7,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 20,
+      "ar": 15,
+      "dr": 9,
+      "sl": 4,
+      "rr": 8,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 22,
+      "ar": 15,
+      "dr": 10,
+      "sl": 6,
+      "rr": 8,
+      "mult": 2,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 8,
+      "ar": 15,
+      "dr": 6,
+      "sl": 4,
+      "rr": 5,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 0,
+      "vib": 0,
+      "trem": 1
+    }
+  ],
+  "board_id": 0
+}

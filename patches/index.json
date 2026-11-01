@@ -1,0 +1,295 @@
+{
+  "v": 1,
+  "generated": "2026-11-01T16:45:27+08:00",
+  "base": "https://fastly.jsdelivr.net/gh/AUXUWA/OX-1-scores@main/patches/",
+  "patches": [
+    {
+      "file": "board_0.json",
+      "name": "羽管键琴",
+      "kind": "factory",
+      "board_id": 0,
+      "algo": 0,
+      "fb": 0,
+      "bytes": 3393,
+      "sha256": "8f1285448fbfcc882f42c85797b5dd81ba8f1c77322bc28c215a5ac7d4304f55"
+    },
+    {
+      "file": "board_1.json",
+      "name": "电钢琴",
+      "kind": "factory",
+      "board_id": 1,
+      "algo": 1,
+      "fb": 0,
+      "bytes": 3491,
+      "sha256": "0f6831eb8c048f3f17e18d2a64c07a2825cc80f3691c17cf06a65fa2998fb73d"
+    },
+    {
+      "file": "board_2.json",
+      "name": "拨弦",
+      "kind": "factory",
+      "board_id": 2,
+      "algo": 2,
+      "fb": 0,
+      "bytes": 3429,
+      "sha256": "aa837eaaa2a1d1d0561236e0b50982ce85665ca80121fca539d053d42a507311"
+    },
+    {
+      "file": "board_3.json",
+      "name": "金属打击·树形",
+      "kind": "factory",
+      "board_id": 3,
+      "algo": 3,
+      "fb": 0,
+      "bytes": 3391,
+      "sha256": "04d5e54c7a09eeba8ea56e03b7ba7567b12cfcc31218ef84a26cb79bd6574a50"
+    },
+    {
+      "file": "board_4.json",
+      "name": "管风琴",
+      "kind": "factory",
+      "board_id": 4,
+      "algo": 4,
+      "fb": 0,
+      "bytes": 3618,
+      "sha256": "08024f2050cbd92324d3507ffef55ae9e3b3422dfc94c724b8b82c2a8923dabf"
+    },
+    {
+      "file": "board_5.json",
+      "name": "Supersaw",
+      "kind": "factory",
+      "board_id": 5,
+      "algo": 5,
+      "fb": 0,
+      "bytes": 3521,
+      "sha256": "39548cce95c0149a0506c88b2e31711fba4ca0568f4c56e5f5c6045b0faa1e87"
+    },
+    {
+      "file": "board_6.json",
+      "name": "弦乐群",
+      "kind": "factory",
+      "board_id": 6,
+      "algo": 6,
+      "fb": 3,
+      "bytes": 3443,
+      "sha256": "d8f96b7ece963a6a0cdbaa8dc4bf271e8256b8eff9f93e574191dfe51a6d2bf7"
+    },
+    {
+      "file": "board_7.json",
+      "name": "钟",
+      "kind": "factory",
+      "board_id": 7,
+      "algo": 7,
+      "fb": 0,
+      "bytes": 3588,
+      "sha256": "d1437c136a15e18368947a87d3b9eceaaf14a94c5fed8ad55adaa3398c846480"
+    },
+    {
+      "file": "local_new/Dinger 钟琴.json",
+      "name": "Dinger 钟琴",
+      "kind": "user",
+      "board_id": null,
+      "algo": 1,
+      "fb": 0,
+      "bytes": 1358,
+      "sha256": "eb0e22dadf0ea92dbfb7ce5c9cc527331383cb338c00c91319ae2c45d315a0b4"
+    },
+    {
+      "file": "local_new/Night Pad 闷锯.json",
+      "name": "Night Pad 闷锯",
+      "kind": "user",
+      "board_id": null,
+      "algo": 5,
+      "fb": 0,
+      "bytes": 1343,
+      "sha256": "bdde92d25c90198b50311a7fbfcbb189f81fb992c48e94814e828a73aab26452"
+    },
+    {
+      "file": "local_new/先锋领奏·尖.json",
+      "name": "先锋领奏·尖",
+      "kind": "user",
+      "board_id": null,
+      "algo": 5,
+      "fb": 0,
+      "bytes": 1342,
+      "sha256": "8f875ca0cbc724d09fb3fae144d836b4336b020e75909514c98c7fdabb5a1e25"
+    },
+    {
+      "file": "local_new/合唱人声·暗.json",
+      "name": "合唱人声·暗",
+      "kind": "user",
+      "board_id": null,
+      "algo": 6,
+      "fb": 2,
+      "bytes": 1342,
+      "sha256": "13e21e85d69abf1669b9c79277fa175b28d3067c24b5ac170491098139b9253b"
+    },
+    {
+      "file": "local_new/和声人声.json",
+      "name": "和声人声",
+      "kind": "user",
+      "board_id": null,
+      "algo": 4,
+      "fb": 0,
+      "bytes": 1325,
+      "sha256": "e84c66abd3f39d60ade899a70222ec87079b79d38408a09fc5d021d9570042c8"
+    },
+    {
+      "file": "local_new/弦乐·緊.json",
+      "name": "弦乐·緊",
+      "kind": "user",
+      "board_id": null,
+      "algo": 6,
+      "fb": 5,
+      "bytes": 1326,
+      "sha256": "09a80787818b489b233d41817f28f3e2ccabffde49e4d14cdfe9b31803cf2d49"
+    },
+    {
+      "file": "local_new/指贝斯·圆.json",
+      "name": "指贝斯·圆",
+      "kind": "user",
+      "board_id": null,
+      "algo": 2,
+      "fb": 0,
+      "bytes": 1343,
+      "sha256": "30c8c649dd036b46f09b539da9baf5f67d4e9684201227e385868e90ed85f04c"
+    },
+    {
+      "file": "local_new/水下钟.json",
+      "name": "水下钟",
+      "kind": "user",
+      "board_id": null,
+      "algo": 7,
+      "fb": 0,
+      "bytes": 1317,
+      "sha256": "b4bed71bfab56ac89fd13128793910694edec0529c0eb559ad2b450c2c388a7d"
+    },
+    {
+      "file": "local_new/玻璃领奏.json",
+      "name": "玻璃领奏",
+      "kind": "user",
+      "board_id": null,
+      "algo": 0,
+      "fb": 0,
+      "bytes": 1328,
+      "sha256": "c44c223ba4c6f4e3398bf1012216f8eae7cf15208ecad4e87510da0760a803f0"
+    },
+    {
+      "file": "local_new/电钢·暖芯.json",
+      "name": "电钢·暖芯",
+      "kind": "user",
+      "board_id": null,
+      "algo": 1,
+      "fb": 0,
+      "bytes": 1353,
+      "sha256": "3ca60334e7e63045d959fb3843668aac69f4d2a67eb2307aa6ddb423da198d45"
+    },
+    {
+      "file": "local_new/管风琴·主音栓.json",
+      "name": "管风琴·主音栓",
+      "kind": "user",
+      "board_id": null,
+      "algo": 4,
+      "fb": 0,
+      "bytes": 1381,
+      "sha256": "0aa6389aff2842b2453d8de31f4eae47ad56fc6bd07b31fd3f8f1173d8b3778c"
+    },
+    {
+      "file": "local_new/羽管键琴·暗拨.json",
+      "name": "羽管键琴·暗拨",
+      "kind": "user",
+      "board_id": null,
+      "algo": 0,
+      "fb": 0,
+      "bytes": 1385,
+      "sha256": "80eb1b1a2dc4b389a8c7ef2fced57bceb1da45260405459a3dbd2c4b2e874ff4"
+    },
+    {
+      "file": "local_new/金属·雨滴.json",
+      "name": "金属·雨滴",
+      "kind": "user",
+      "board_id": null,
+      "algo": 3,
+      "fb": 0,
+      "bytes": 1360,
+      "sha256": "75d582857020ec2791784bffd86fdb83ea2f2c7a4dc8e15cb58d18d72757fafd"
+    },
+    {
+      "file": "local_new/铜锣·闷.json",
+      "name": "铜锣·闷",
+      "kind": "user",
+      "board_id": null,
+      "algo": 3,
+      "fb": 0,
+      "bytes": 1323,
+      "sha256": "b89989334dd4d34b4b4c5b0361540cfaf8da50db15366e6acee72afd7c4bcfd6"
+    },
+    {
+      "file": "local_new/风铃·散.json",
+      "name": "风铃·散",
+      "kind": "user",
+      "board_id": null,
+      "algo": 7,
+      "fb": 0,
+      "bytes": 1318,
+      "sha256": "9345caf2e73d0365e16102850ca96193af9953f3b1e187f111bf46640bce7f84"
+    },
+    {
+      "file": "local_new/马林巴.json",
+      "name": "马林巴",
+      "kind": "user",
+      "board_id": null,
+      "algo": 2,
+      "fb": 0,
+      "bytes": 1310,
+      "sha256": "bef681751a6f1d21fe4e7fd831c53272a8e00c45376fea8201bbe95839284929"
+    },
+    {
+      "file": "ab_bright.json",
+      "name": "对照试听 bright（同一段音乐 × 本地音色）",
+      "kind": "ab",
+      "board_id": null,
+      "algo": null,
+      "fb": null,
+      "ab_tracks": [
+        "玻璃领奏",
+        "弦乐·緊",
+        "马林巴",
+        "金属·雨滴"
+      ],
+      "bytes": 21516,
+      "sha256": "43fa567f15bb233bc4606a6715027b27ca8936b0ef597d7af396425fa8453e5e"
+    },
+    {
+      "file": "ab_mellow.json",
+      "name": "对照试听 mellow（同一段音乐 × 本地音色）",
+      "kind": "ab",
+      "board_id": null,
+      "algo": null,
+      "fb": null,
+      "ab_tracks": [
+        "电钢·暖芯",
+        "和声人声",
+        "指贝斯·圆",
+        "铜锣·闷"
+      ],
+      "bytes": 21534,
+      "sha256": "f29f642eb8664bf6a1dc31d9fe1a0116e37aca23254b184e64735dcad0a19ff5"
+    },
+    {
+      "file": "ab_metal.json",
+      "name": "对照试听 metal（同一段音乐 × 本地音色）",
+      "kind": "ab",
+      "board_id": null,
+      "algo": null,
+      "fb": null,
+      "ab_tracks": [
+        "先锋领奏·尖",
+        "合唱人声·暗",
+        "马林巴",
+        "Dinger 钟琴"
+      ],
+      "bytes": 21548,
+      "sha256": "6bd4e0fa4ed9f21d77f7bd3a061f7068a1a8ee7d58188451d056cdb92593834c"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "pop_funk_4x32",
+  "name": "放克 Funk（4 轨 × 32 步）",
+  "style": "pop",
+  "step_ms": 130,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "拨弦",
+      "patch": 2,
+      "patch_name": "拨弦",
+      "role": "击弦贝斯（十六分 ghost note）"
+    },
+    {
+      "index": 1,
+      "name": "Supersaw",
+      "patch": 5,
+      "patch_name": "Supersaw",
+      "role": "主奏 riff（切分长音）"
+    },
+    {
+      "index": 2,
+      "name": "电钢琴",
+      "patch": 1,
+      "patch_name": "电钢琴",
+      "role": "切分和弦（off-beat）"
+    },
+    {
+      "index": 3,
+      "name": "金属打击·树形",
+      "patch": 3,
+      "patch_name": "金属打击·树形",
+      "role": "backbeat（2/4 拍位）"
+    }
+  ],
+  "events": 19,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

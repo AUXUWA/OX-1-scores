@@ -1,0 +1,53 @@
+{
+  "slug": "experimental_4x32",
+  "name": "实验 Experimental（4 轨 × 32 步）",
+  "style": "experimental",
+  "step_ms": 100,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "金属",
+      "patch": 3,
+      "patch_name": "金属打击·树形",
+      "role": "噪声性打击（不规则落点）"
+    },
+    {
+      "index": 1,
+      "name": "钟",
+      "patch": 7,
+      "patch_name": "钟",
+      "role": "环形 FM 长音（两个远景块）"
+    },
+    {
+      "index": 2,
+      "name": "拨弦",
+      "patch": 2,
+      "patch_name": "拨弦",
+      "role": "快速碎音（三全音跳进）"
+    },
+    {
+      "index": 3,
+      "name": "电钢",
+      "patch": 1,
+      "patch_name": "电钢琴",
+      "role": "半音簇（故意不协和）"
+    }
+  ],
+  "events": 30,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

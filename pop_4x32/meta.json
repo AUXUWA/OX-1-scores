@@ -1,0 +1,53 @@
+{
+  "slug": "pop_4x32",
+  "name": "流行 Pop（4 轨 × 32 步）",
+  "style": "pop",
+  "step_ms": 120,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "电钢",
+      "patch": 1,
+      "patch_name": "电钢琴",
+      "role": "和弦伴奏（位图多键，每 2 步一记）"
+    },
+    {
+      "index": 1,
+      "name": "贝斯",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "贝斯（八分音符，根-五交替）"
+    },
+    {
+      "index": 2,
+      "name": "主奏",
+      "patch": 5,
+      "patch_name": "Supersaw",
+      "role": "主旋律（切分 + 跨小节长音）"
+    },
+    {
+      "index": 3,
+      "name": "打击",
+      "patch": 3,
+      "patch_name": "金属打击·树形",
+      "role": "kick（强拍）/ snare（反拍）/ hi-hat（八分）"
+    }
+  ],
+  "events": 32,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

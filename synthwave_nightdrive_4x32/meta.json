@@ -1,0 +1,48 @@
+{
+  "slug": "synthwave_nightdrive_4x32",
+  "name": "夜驰 Synthwave",
+  "style": "电子 synthwave",
+  "step_ms": 150,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "name": "Supersaw",
+      "patch": 5,
+      "patch_name": "Supersaw",
+      "role": "lead 长句（每 4 步一换）"
+    },
+    {
+      "name": "拨弦",
+      "patch": 2,
+      "patch_name": "拨弦",
+      "role": "贝斯八分（根音按和弦跳）"
+    },
+    {
+      "name": "电钢琴",
+      "patch": 1,
+      "patch_name": "电钢琴",
+      "role": "arpeggio 十六分（后 16 步）"
+    },
+    {
+      "name": "金属打击·树形",
+      "patch": 3,
+      "patch_name": "金属打击·树形",
+      "role": "四踩（每 4 步）"
+    }
+  ],
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "duration_s": 6.8,
+  "peak": 7586.0,
+  "peak_dbfs": -12.71,
+  "rms_dbfs": -32.32,
+  "wav_bytes": 1328140,
+  "wav_md5": "6be5271c33347d8dcee3f89f1e1a6659",
+  "n_events": 292,
+  "clipped_samples": 0,
+  "mood": "夜路、霓虹、仪表盘"
+}

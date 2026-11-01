@@ -1,0 +1,667 @@
+{
+  "format": "ox1-multitrack-score",
+  "format_version": 1,
+  "name": "深空 Ambient（4 轨 × 32 步）",
+  "desc": "极慢（260 ms/步）+ 长门 + 深混响：管风琴低音 drone 压底，弦乐群每 8 步换一个开放五度，钟在最远端点两下，电钢琴在高音区偶发一点亮色。情绪 = 失重、空旷。",
+  "key": "C 大调（开放五度堆叠，无三音）",
+  "step_ms": 260,
+  "loop": 1,
+  "total_steps": 32,
+  "gate_semantics": "★ 每轨的音符是 **dur 步的门**（dur ≥ 1）—— 与板上音序器的「门 = 1 步」是同一套语义，只是这里允许把门拉长。",
+  "timbre_source": "mega60k/rtl/top/patch_bank.v —— 板级音色库 8 套（预设号 0..7）；参数与 tools/patch_designer/presets.json 里 board_id=0..7 逐比特相同",
+  "voice_map": "mega60k/rtl/app/seq_play4.v:32-35 —— 4 轨各占一个专用引擎声部 124..127（页 7、低 4 位 12..15）；每轨音色靠引擎的 part 区分（0xD0+v 写 part_idx，N_PART=4，mega60k/rtl/audio/fm_engine.v:47-49,69）",
+  "key_range": "0=C3 … 23=B4（线上 bitmap 24 bit ⇒ 键号 ≤ 23）",
+  "fx": {
+    "en": 1,
+    "room": 7,
+    "damp": 10,
+    "wet": 7,
+    "spread": 1,
+    "width": 15,
+    "predelay": 40
+  },
+  "tracks": [
+    {
+      "index": 0,
+      "name": "弦乐群",
+      "timbre": "弦乐群",
+      "role": "长音铺底（每 8 步一个开放五度）",
+      "patch": 6,
+      "part_idx": 0,
+      "voice": 124,
+      "patch_source": "tools/patch_designer/presets.json:board_id=6（name=弦乐群）；algo6 自反馈 FB=3 的暖长音最适合 8 步长门",
+      "steps": [
+        {
+          "bitmap": 528384,
+          "dur": 8
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 132096,
+          "dur": 8
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 33024,
+          "dur": 8
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 4128,
+          "dur": 8
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 0,
+          "keys": [
+            12,
+            19
+          ],
+          "dur": 8
+        },
+        {
+          "step": 8,
+          "keys": [
+            10,
+            17
+          ],
+          "dur": 8
+        },
+        {
+          "step": 16,
+          "keys": [
+            8,
+            15
+          ],
+          "dur": 8
+        },
+        {
+          "step": 24,
+          "keys": [
+            5,
+            12
+          ],
+          "dur": 8
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "name": "管风琴",
+      "timbre": "管风琴",
+      "role": "低音 drone（0/16 步 EGT=1 永续）",
+      "patch": 4,
+      "part_idx": 1,
+      "voice": 125,
+      "patch_source": "tools/patch_designer/presets.json:board_id=4（name=管风琴）；algo4 全并联 EGT=1 永不衰减，drone 不断",
+      "steps": [
+        {
+          "bitmap": 1,
+          "dur": 16
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 32,
+          "dur": 16
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 0,
+          "keys": [
+            0
+          ],
+          "dur": 16
+        },
+        {
+          "step": 16,
+          "keys": [
+            5
+          ],
+          "dur": 16
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "name": "钟",
+      "timbre": "钟",
+      "role": "远景点缀（每 16 步一记）",
+      "patch": 7,
+      "part_idx": 2,
+      "voice": 126,
+      "patch_source": "tools/patch_designer/presets.json:board_id=7（name=钟）；algo7 环形 FM 衰减快，像远处的浮钟",
+      "steps": [
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 8388608,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 1048576,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 14,
+          "keys": [
+            23
+          ],
+          "dur": 2
+        },
+        {
+          "step": 30,
+          "keys": [
+            20
+          ],
+          "dur": 2
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "name": "电钢琴",
+      "timbre": "电钢琴",
+      "role": "高音区偶发亮色（错位）",
+      "patch": 1,
+      "part_idx": 3,
+      "voice": 127,
+      "patch_source": "tools/patch_designer/presets.json:board_id=1（name=电钢琴）；algo1 比钟暖、比弦乐亮，填中高频空隙",
+      "steps": [
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 65536,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 524288,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 6,
+          "keys": [
+            16
+          ],
+          "dur": 2
+        },
+        {
+          "step": 22,
+          "keys": [
+            19
+          ],
+          "dur": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+{
+  "format": "ox1-multitrack-score",
+  "format_version": 1,
+  "name": "落日 Lo-fi（4 轨 × 32 步）",
+  "desc": "慢板（220 ms/步）：电钢琴九和弦铺底，拨弦贝斯松散，弦乐群垫长音，钟当风铃。重混响+慢 damp ⇒ 磁带感。情绪 = 夕阳、旧磁带。",
+  "key": "F 大调七和弦（Fmaj7-Em7-Dm7-Cmaj7）",
+  "step_ms": 220,
+  "loop": 1,
+  "total_steps": 32,
+  "gate_semantics": "★ 每轨的音符是 **dur 步的门**（dur ≥ 1）—— 与板上音序器的「门 = 1 步」是同一套语义，只是这里允许把门拉长。",
+  "timbre_source": "mega60k/rtl/top/patch_bank.v —— 板级音色库 8 套（预设号 0..7）；参数与 tools/patch_designer/presets.json 里 board_id=0..7 逐比特相同",
+  "voice_map": "mega60k/rtl/app/seq_play4.v:32-35 —— 4 轨各占一个专用引擎声部 124..127（页 7、低 4 位 12..15）；每轨音色靠引擎的 part 区分（0xD0+v 写 part_idx，N_PART=4，mega60k/rtl/audio/fm_engine.v:47-49,69）",
+  "key_range": "0=C3 … 23=B4（线上 bitmap 24 bit ⇒ 键号 ≤ 23）",
+  "fx": {
+    "en": 1,
+    "room": 7,
+    "damp": 14,
+    "wet": 6,
+    "spread": 1,
+    "width": 14,
+    "predelay": 35
+  },
+  "tracks": [
+    {
+      "index": 0,
+      "name": "电钢琴",
+      "timbre": "电钢琴",
+      "role": "九和弦铺底（每 8 步一换）",
+      "patch": 1,
+      "part_idx": 0,
+      "voice": 124,
+      "patch_source": "tools/patch_designer/presets.json:board_id=1（name=电钢琴）；algo1 衰减型电钢 = lo-fi 主角",
+      "steps": [
+        {
+          "bitmap": 70176,
+          "dur": 8
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 18576,
+          "dur": 8
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 4644,
+          "dur": 8
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 1169,
+          "dur": 8
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 0,
+          "keys": [
+            5,
+            9,
+            12,
+            16
+          ],
+          "dur": 8
+        },
+        {
+          "step": 8,
+          "keys": [
+            4,
+            7,
+            11,
+            14
+          ],
+          "dur": 8
+        },
+        {
+          "step": 16,
+          "keys": [
+            2,
+            5,
+            9,
+            12
+          ],
+          "dur": 8
+        },
+        {
+          "step": 24,
+          "keys": [
+            0,
+            4,
+            7,
+            10
+          ],
+          "dur": 8
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "name": "拨弦",
+      "timbre": "拨弦",
+      "role": "松散贝斯（半拍滞后）",
+      "patch": 2,
+      "part_idx": 1,
+      "voice": 125,
+      "patch_source": "tools/patch_designer/presets.json:board_id=2（name=拨弦）；拨弦低音 + 松散时值 = lo-fi 慵懒",
+      "steps": [
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 32,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 16,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 16,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 4,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 1,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 32,
+          "dur": 1
+        }
+      ],
+      "notes": [
+        {
+          "step": 1,
+          "keys": [
+            5
+          ],
+          "dur": 2
+        },
+        {
+          "step": 9,
+          "keys": [
+            4
+          ],
+          "dur": 2
+        },
+        {
+          "step": 17,
+          "keys": [
+            2
+          ],
+          "dur": 2
+        },
+        {
+          "step": 25,
+          "keys": [
+            0
+          ],
+          "dur": 2
+        },
+        {
+          "step": 15,
+          "keys": [
+            4
+          ],
+          "dur": 1
+        },
+        {
+          "step": 31,
+          "keys": [
+            5
+          ],
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "name": "弦乐群",
+      "timbre": "弦乐群",
+      "role": "长音垫（16 步全音符）",
+      "patch": 6,
+      "part_idx": 2,
+      "voice": 126,
+      "patch_source": "tools/patch_designer/presets.json:board_id=6（name=弦乐群）；FB=3 长垫把和弦缝起来",
+      "steps": [
+        {
+          "bitmap": 4096,
+          "dur": 16
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 1024,
+          "dur": 16
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 0,
+          "keys": [
+            12
+          ],
+          "dur": 16
+        },
+        {
+          "step": 16,
+          "keys": [
+            10
+          ],
+          "dur": 16
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "name": "钟",
+      "timbre": "钟",
+      "role": "风铃（偶发高音）",
+      "patch": 7,
+      "part_idx": 3,
+      "voice": 127,
+      "patch_source": "tools/patch_designer/presets.json:board_id=7（name=钟）；钟的高泛音像风铃挂件",
+      "steps": [
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 8388608,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 1048576,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 2097152,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 7,
+          "keys": [
+            23
+          ],
+          "dur": 1
+        },
+        {
+          "step": 19,
+          "keys": [
+            20
+          ],
+          "dur": 1
+        },
+        {
+          "step": 27,
+          "keys": [
+            21
+          ],
+          "dur": 1
+        }
+      ]
+    }
+  ]
+}

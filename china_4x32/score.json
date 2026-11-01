@@ -1,0 +1,919 @@
+{
+  "format": "ox1-multitrack-score",
+  "format_version": 1,
+  "name": "中国风 China（五声音阶，4 轨 × 32 步）",
+  "desc": "**五声音阶**（C D E G A，键号 0/2/4/7/9 与高八度 12/14/16/19/21）：羽管键琴（algo0 串联）当笛子的主旋律，弦乐群（algo6 反馈）当古筝的分解和弦，管风琴（algo4 全并联）压低音，钟（algo7 环形）点缀 —— **没有半音经过音**，靠长音与留白说话。",
+  "key": "C 五声（宫商角徵羽：C D E G A）",
+  "step_ms": 150,
+  "loop": 1,
+  "total_steps": 32,
+  "gate_semantics": "★ 每轨的音符是 **dur 步的门**（dur ≥ 1）—— 与板上音序器的「门 = 1 步」是同一套语义，只是这里允许把门拉长。",
+  "progression": [
+    {
+      "chord": "宫(C)",
+      "steps": [
+        0,
+        7
+      ]
+    },
+    {
+      "chord": "徵(G)",
+      "steps": [
+        8,
+        15
+      ]
+    },
+    {
+      "chord": "羽(A)",
+      "steps": [
+        16,
+        23
+      ]
+    },
+    {
+      "chord": "商(D)",
+      "steps": [
+        24,
+        31
+      ]
+    }
+  ],
+  "timbre_source": "mega60k/rtl/top/patch_bank.v —— 板级音色库 8 套（预设号 0..7）；参数与 tools/patch_designer/presets.json 里 board_id=0..7 逐比特相同",
+  "voice_map": "mega60k/rtl/app/seq_play4.v:32-35 —— 4 轨各占一个专用引擎声部 124..127（页 7、低 4 位 12..15）；每轨音色靠引擎的 part 区分（0xD0+v 写 part_idx，N_PART=4，mega60k/rtl/audio/fm_engine.v:47-49,69）",
+  "key_range": "0=C3 … 23=B4（本曲实际用到 0..21，越界音（>23）数量 = 0）",
+  "fx": {
+    "en": 1,
+    "room": 5,
+    "damp": 11,
+    "wet": 5,
+    "spread": 1,
+    "width": 14,
+    "predelay": 16
+  },
+  "tracks": [
+    {
+      "index": 0,
+      "name": "笛",
+      "timbre": "羽管键琴",
+      "role": "主旋律（五声，长音 + 装饰）",
+      "patch": 0,
+      "algo": 0,
+      "fb": 0,
+      "part_idx": 0,
+      "voice": 124,
+      "patch_source": "tools/patch_designer/presets.json:board_id=0（name=羽管键琴）；mega60k/rtl/top/patch_bank.v:25（0 羽管键琴 algo0 串联 载波 op3 FB=0）",
+      "steps": [
+        {
+          "bitmap": 65536,
+          "dur": 4
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 524288,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 2097152,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 524288,
+          "dur": 4
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 65536,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 16384,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 2097152,
+          "dur": 4
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 524288,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 65536,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 16384,
+          "dur": 4
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 65536,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 524288,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 0,
+          "keys": [
+            16
+          ],
+          "dur": 4,
+          "label": "E4"
+        },
+        {
+          "step": 4,
+          "keys": [
+            19
+          ],
+          "dur": 2,
+          "label": "G4"
+        },
+        {
+          "step": 6,
+          "keys": [
+            21
+          ],
+          "dur": 2,
+          "label": "A4"
+        },
+        {
+          "step": 8,
+          "keys": [
+            19
+          ],
+          "dur": 4,
+          "label": "G4"
+        },
+        {
+          "step": 12,
+          "keys": [
+            16
+          ],
+          "dur": 2,
+          "label": "E4"
+        },
+        {
+          "step": 14,
+          "keys": [
+            14
+          ],
+          "dur": 2,
+          "label": "D4"
+        },
+        {
+          "step": 16,
+          "keys": [
+            21
+          ],
+          "dur": 4,
+          "label": "A4"
+        },
+        {
+          "step": 20,
+          "keys": [
+            19
+          ],
+          "dur": 2,
+          "label": "G4"
+        },
+        {
+          "step": 22,
+          "keys": [
+            16
+          ],
+          "dur": 2,
+          "label": "E4"
+        },
+        {
+          "step": 24,
+          "keys": [
+            14
+          ],
+          "dur": 4,
+          "label": "D4"
+        },
+        {
+          "step": 28,
+          "keys": [
+            16
+          ],
+          "dur": 2,
+          "label": "E4"
+        },
+        {
+          "step": 30,
+          "keys": [
+            19
+          ],
+          "dur": 2,
+          "label": "G4"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "name": "古筝",
+      "timbre": "弦乐群",
+      "role": "古筝式分解（宫-商-角-徵）",
+      "patch": 6,
+      "algo": 6,
+      "fb": 5,
+      "part_idx": 1,
+      "voice": 125,
+      "patch_source": "tools/patch_designer/presets.json:board_id=6（name=弦乐群）；mega60k/rtl/top/patch_bank.v:31（6 弦乐群 algo6 反馈 载波 op3 FB=5）",
+      "steps": [
+        {
+          "bitmap": 4096,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 16384,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 65536,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 524288,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 4096,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 16384,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 65536,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 524288,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 512,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 4096,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 16384,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 65536,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 128,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 512,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 4096,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 16384,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 0,
+          "keys": [
+            12
+          ],
+          "dur": 2,
+          "label": "C4"
+        },
+        {
+          "step": 2,
+          "keys": [
+            14
+          ],
+          "dur": 2,
+          "label": "D4"
+        },
+        {
+          "step": 4,
+          "keys": [
+            16
+          ],
+          "dur": 2,
+          "label": "E4"
+        },
+        {
+          "step": 6,
+          "keys": [
+            19
+          ],
+          "dur": 2,
+          "label": "G4"
+        },
+        {
+          "step": 8,
+          "keys": [
+            12
+          ],
+          "dur": 2,
+          "label": "C4"
+        },
+        {
+          "step": 10,
+          "keys": [
+            14
+          ],
+          "dur": 2,
+          "label": "D4"
+        },
+        {
+          "step": 12,
+          "keys": [
+            16
+          ],
+          "dur": 2,
+          "label": "E4"
+        },
+        {
+          "step": 14,
+          "keys": [
+            19
+          ],
+          "dur": 2,
+          "label": "G4"
+        },
+        {
+          "step": 16,
+          "keys": [
+            9
+          ],
+          "dur": 2,
+          "label": "A3"
+        },
+        {
+          "step": 18,
+          "keys": [
+            12
+          ],
+          "dur": 2,
+          "label": "C4"
+        },
+        {
+          "step": 20,
+          "keys": [
+            14
+          ],
+          "dur": 2,
+          "label": "D4"
+        },
+        {
+          "step": 22,
+          "keys": [
+            16
+          ],
+          "dur": 2,
+          "label": "E4"
+        },
+        {
+          "step": 24,
+          "keys": [
+            7
+          ],
+          "dur": 2,
+          "label": "G3"
+        },
+        {
+          "step": 26,
+          "keys": [
+            9
+          ],
+          "dur": 2,
+          "label": "A3"
+        },
+        {
+          "step": 28,
+          "keys": [
+            12
+          ],
+          "dur": 2,
+          "label": "C4"
+        },
+        {
+          "step": 30,
+          "keys": [
+            14
+          ],
+          "dur": 2,
+          "label": "D4"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "name": "低音",
+      "timbre": "管风琴",
+      "role": "低音（宫-徵-羽-商）",
+      "patch": 4,
+      "algo": 4,
+      "fb": 0,
+      "part_idx": 2,
+      "voice": 126,
+      "patch_source": "tools/patch_designer/presets.json:board_id=4（name=管风琴）；mega60k/rtl/top/patch_bank.v:29（4 管风琴 algo4 全并联 载波 op0,op1,op2,op3 FB=0）",
+      "steps": [
+        {
+          "bitmap": 1,
+          "dur": 8
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 128,
+          "dur": 8
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 512,
+          "dur": 8
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 4,
+          "dur": 8
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 0,
+          "keys": [
+            0
+          ],
+          "dur": 8,
+          "label": "C3"
+        },
+        {
+          "step": 8,
+          "keys": [
+            7
+          ],
+          "dur": 8,
+          "label": "G3"
+        },
+        {
+          "step": 16,
+          "keys": [
+            9
+          ],
+          "dur": 8,
+          "label": "A3"
+        },
+        {
+          "step": 24,
+          "keys": [
+            2
+          ],
+          "dur": 8,
+          "label": "D3"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "name": "磬",
+      "timbre": "钟",
+      "role": "点缀（一记一记，不成拍）",
+      "patch": 7,
+      "algo": 7,
+      "fb": 0,
+      "part_idx": 3,
+      "voice": 127,
+      "patch_source": "tools/patch_designer/presets.json:board_id=7（name=钟）；mega60k/rtl/top/patch_bank.v:32（7 钟 algo7 环形 载波 op0,op3 FB=0）",
+      "steps": [
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 524288,
+          "dur": 3
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 2097152,
+          "dur": 3
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 65536,
+          "dur": 3
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 524288,
+          "dur": 3
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 2,
+          "keys": [
+            19
+          ],
+          "dur": 3,
+          "label": "G4"
+        },
+        {
+          "step": 11,
+          "keys": [
+            21
+          ],
+          "dur": 3,
+          "label": "A4"
+        },
+        {
+          "step": 19,
+          "keys": [
+            16
+          ],
+          "dur": 3,
+          "label": "E4"
+        },
+        {
+          "step": 27,
+          "keys": [
+            19
+          ],
+          "dur": 3,
+          "label": "G4"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "format": "ox1-patch-designer-presets 1",
+  "local_name": "Dinger 钟琴",
+  "algo": 1,
+  "fb": 0,
+  "percussive": true,
+  "timbre": "脆、玻璃钟、不和谐泛音",
+  "desc": "algo1 + mult=7 深调制 + EGT=0：像打荷兰 Dinger 玻璃钟，谐音不和谐但脆",
+  "ops": [
+    {
+      "tl": 24,
+      "ar": 15,
+      "dr": 4,
+      "sl": 12,
+      "rr": 8,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 22,
+      "ar": 15,
+      "dr": 5,
+      "sl": 11,
+      "rr": 8,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 14,
+      "ar": 15,
+      "dr": 6,
+      "sl": 10,
+      "rr": 8,
+      "mult": 7,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 12,
+      "ar": 15,
+      "dr": 3,
+      "sl": 13,
+      "rr": 8,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    }
+  ],
+  "local_id": "Dinger 钟琴",
+  "//": "本地音色（**无 board_id**，不进 patch_bank.v）—— 用它渲染时曲谱轨写 \"patch_local\": \"Dinger 钟琴\"。需 rtl 落进 patch_bank.v + 扩 preset 位宽（现 3 bit/8 套）才能上板。"
+}

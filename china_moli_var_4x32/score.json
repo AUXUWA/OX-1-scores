@@ -1,0 +1,763 @@
+{
+  "format": "ox1-multitrack-score",
+  "format_version": 1,
+  "name": "茉莉变奏（4 轨 × 32 步）",
+  "desc": "五声音阶变奏（180 ms/步）：管风琴低音五度 drone，弦乐群奏主句，拨弦弹五声琶音对位，钟点板眼。情绪 = 江南、婉转。",
+  "key": "C 宫五声（C D E G A）",
+  "step_ms": 180,
+  "loop": 1,
+  "total_steps": 32,
+  "gate_semantics": "★ 每轨的音符是 **dur 步的门**（dur ≥ 1）—— 与板上音序器的「门 = 1 步」是同一套语义，只是这里允许把门拉长。",
+  "timbre_source": "mega60k/rtl/top/patch_bank.v —— 板级音色库 8 套（预设号 0..7）；参数与 tools/patch_designer/presets.json 里 board_id=0..7 逐比特相同",
+  "voice_map": "mega60k/rtl/app/seq_play4.v:32-35 —— 4 轨各占一个专用引擎声部 124..127（页 7、低 4 位 12..15）；每轨音色靠引擎的 part 区分（0xD0+v 写 part_idx，N_PART=4，mega60k/rtl/audio/fm_engine.v:47-49,69）",
+  "key_range": "0=C3 … 23=B4（线上 bitmap 24 bit ⇒ 键号 ≤ 23）",
+  "fx": {
+    "en": 1,
+    "room": 6,
+    "damp": 11,
+    "wet": 6,
+    "spread": 1,
+    "width": 14,
+    "predelay": 30
+  },
+  "tracks": [
+    {
+      "index": 0,
+      "name": "管风琴",
+      "timbre": "管风琴",
+      "role": "五度 drone（0/16 长门）",
+      "patch": 4,
+      "part_idx": 0,
+      "voice": 124,
+      "patch_source": "tools/patch_designer/presets.json:board_id=4（name=管风琴）；EGT=1 永续，当民族调性的空五度底",
+      "steps": [
+        {
+          "bitmap": 129,
+          "dur": 16
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 66048,
+          "dur": 16
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 0,
+          "keys": [
+            0,
+            7
+          ],
+          "dur": 16
+        },
+        {
+          "step": 16,
+          "keys": [
+            9,
+            16
+          ],
+          "dur": 16
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "name": "弦乐群",
+      "timbre": "弦乐群",
+      "role": "主句（茉莉头句变奏）",
+      "patch": 6,
+      "part_idx": 1,
+      "voice": 125,
+      "patch_source": "tools/patch_designer/presets.json:board_id=6（name=弦乐群）；FB=3 弦乐拉出歌唱性",
+      "steps": [
+        {
+          "bitmap": 65536,
+          "dur": 3
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 16384,
+          "dur": 1
+        },
+        {
+          "bitmap": 65536,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 524288,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 2097152,
+          "dur": 4
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 524288,
+          "dur": 3
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 65536,
+          "dur": 1
+        },
+        {
+          "bitmap": 524288,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 65536,
+          "dur": 2
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 16384,
+          "dur": 6
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 0,
+          "keys": [
+            16
+          ],
+          "dur": 3
+        },
+        {
+          "step": 3,
+          "keys": [
+            14
+          ],
+          "dur": 1
+        },
+        {
+          "step": 4,
+          "keys": [
+            16
+          ],
+          "dur": 2
+        },
+        {
+          "step": 6,
+          "keys": [
+            19
+          ],
+          "dur": 2
+        },
+        {
+          "step": 8,
+          "keys": [
+            21
+          ],
+          "dur": 4
+        },
+        {
+          "step": 16,
+          "keys": [
+            19
+          ],
+          "dur": 3
+        },
+        {
+          "step": 19,
+          "keys": [
+            16
+          ],
+          "dur": 1
+        },
+        {
+          "step": 20,
+          "keys": [
+            19
+          ],
+          "dur": 2
+        },
+        {
+          "step": 22,
+          "keys": [
+            16
+          ],
+          "dur": 2
+        },
+        {
+          "step": 24,
+          "keys": [
+            14
+          ],
+          "dur": 6
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "name": "拨弦",
+      "timbre": "拨弦",
+      "role": "五声琶音对位（碎点）",
+      "patch": 2,
+      "part_idx": 2,
+      "voice": 126,
+      "patch_source": "tools/patch_designer/presets.json:board_id=2（name=拨弦）；拨弦的颗粒感像弹拨乐（琵琶/柳琴）",
+      "steps": [
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 4096,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 16384,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 65536,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 524288,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 2097152,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 524288,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 65536,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 4096,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 4,
+          "keys": [
+            12
+          ],
+          "dur": 1
+        },
+        {
+          "step": 6,
+          "keys": [
+            14
+          ],
+          "dur": 1
+        },
+        {
+          "step": 12,
+          "keys": [
+            16
+          ],
+          "dur": 1
+        },
+        {
+          "step": 14,
+          "keys": [
+            19
+          ],
+          "dur": 1
+        },
+        {
+          "step": 20,
+          "keys": [
+            21
+          ],
+          "dur": 1
+        },
+        {
+          "step": 22,
+          "keys": [
+            19
+          ],
+          "dur": 1
+        },
+        {
+          "step": 28,
+          "keys": [
+            16
+          ],
+          "dur": 1
+        },
+        {
+          "step": 30,
+          "keys": [
+            12
+          ],
+          "dur": 1
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "name": "钟",
+      "timbre": "钟",
+      "role": "板眼（0/8/16/24 轻点）",
+      "patch": 7,
+      "part_idx": 3,
+      "voice": 127,
+      "patch_source": "tools/patch_designer/presets.json:board_id=7（name=钟）；钟当木鱼/板眼，压五声律动",
+      "steps": [
+        {
+          "bitmap": 8388608,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 2097152,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 8388608,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 65536,
+          "dur": 1
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        },
+        {
+          "bitmap": 0,
+          "dur": 0
+        }
+      ],
+      "notes": [
+        {
+          "step": 0,
+          "keys": [
+            23
+          ],
+          "dur": 1
+        },
+        {
+          "step": 8,
+          "keys": [
+            21
+          ],
+          "dur": 1
+        },
+        {
+          "step": 16,
+          "keys": [
+            23
+          ],
+          "dur": 1
+        },
+        {
+          "step": 24,
+          "keys": [
+            16
+          ],
+          "dur": 1
+        }
+      ]
+    }
+  ]
+}

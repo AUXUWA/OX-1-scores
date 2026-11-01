@@ -1,0 +1,53 @@
+{
+  "slug": "lofi_sunset_4x32",
+  "name": "落日 Lo-fi（4 轨 × 32 步）",
+  "style": "lofi",
+  "step_ms": 220,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "电钢琴",
+      "patch": 1,
+      "patch_name": "电钢琴",
+      "role": "九和弦铺底（每 8 步一换）"
+    },
+    {
+      "index": 1,
+      "name": "拨弦",
+      "patch": 2,
+      "patch_name": "拨弦",
+      "role": "松散贝斯（半拍滞后）"
+    },
+    {
+      "index": 2,
+      "name": "弦乐群",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "长音垫（16 步全音符）"
+    },
+    {
+      "index": 3,
+      "name": "钟",
+      "patch": 7,
+      "patch_name": "钟",
+      "role": "风铃（偶发高音）"
+    }
+  ],
+  "events": 13,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

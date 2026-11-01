@@ -1,0 +1,97 @@
+{
+  "//": "与 mega60k/rtl/top/patch_bank.v 逐比特一致，勿改（真源=presets.json board_id=7，audit_presets.py --check-bank 守门）",
+  "name": "钟",
+  "status": "draft",
+  "tags": [
+    "打击",
+    "中高音",
+    "衰减",
+    "金属"
+  ],
+  "desc": "algo7：op1→op0、op2→op1、op3→op2、op0→op3；载波 op[0,3]。 四算子互调成环（FB 在这个算法是空操作）。。\nop0 载波 4×(正弦) A15/D7/S3/R6 延音停在 SL 平台；op3 载波 15×(正弦) A15/D5/S5/R8 延音停在 SL 平台。\n实测：质心/f0 = 1.30、起音 1 ms、按住不衰减。\n设计意图（人手写，可能滞后于上面这几行实测参数）：algo2 双串：三条不同衰减时间的高比调制器（4/6/9×）叠出\"各自分音独立衰减\"的钟感。本引擎的 MULT 全是整数/半整数，做不出真非谐，所以靠\"哪些分音强 + 各自独立衰减 + 高质心\"来立钟。",
+  "notes": "★ 本条的 notes 由 tools/patch_designer（fm_core.js 定点引擎）当场量出，`py tools/audit_presets.py` 可复算：\n电平：峰值 -25.2 dBFS（离 4 算子满载的结构上限 16336 还有 19.2 dB），RMS -39.9 dBFS，直流 -75 dBFS，削顶 0 个采样；\n时间：起音 0.6 ms，掉 12dB 381 ms，掉 40dB 不（按住也还在响），释音（松手后掉 40dB）425 ms，延音漂移 -1.7 dB；\n频谱：质心 1359 Hz（C/f0=1.30），谐波 h1..h4 = 0/-32/-15/-22 dB，起音窗 h1..h4 = 0/-5/-5/-8 dB，落在 f0 谐波列上的能量 42%，起音比延音亮 15.5 dB；\n参数：algo7，fnum=702/block=3（C6 1046.1 Hz），载波 op[0,3]；调制器 op[0,1,2,3] 的静态 TL→index 6.86/8.16/1.88/4.46 rad（实际还要再乘衰减后的 egOut）；SL=0x0F 在本引擎是**数字静音**（op_out 恒 0），SL 每低一格 ≈ +3.0 dB 延音；RR≤4 衰减极慢（实测 RR=4 要 3.5s 才到静音），4 以上才是可用释音。\n形态：持续型（载波 EGT=1，SL 段停在 SL 平台；实测按住 2s 末尾 200ms -36 dBFS，落在门禁要求的 -45..-15 区间）；客观评分：100.0/100（靶子画像「钟 / 管钟（2:3:4 敲击音 + 0.5 嗡音）」，判据见 tools/timbre_lab/profiles.js）；失分项 ",
+  "algo": 7,
+  "fb": 0,
+  "fnum": 702,
+  "block": 3,
+  "nts": 0,
+  "keyon": 1,
+  "key_on_at": 1,
+  "key_off_at": null,
+  "frames": 48000,
+  "fx": {
+    "en": 1,
+    "room": 6,
+    "damp": 10,
+    "wet": 4,
+    "spread": 1,
+    "width": 14,
+    "predelay": 8
+  },
+  "attack_ms": 0.6,
+  "carriers": [
+    0,
+    3
+  ],
+  "f0_hz": 1046.06,
+  "range": "C5~C7（本条按 C6 = 1046.1 Hz 设计；TL→index 与 SL 都与音高无关，所以换八度不用重调，但 index 越大、f0 越高越接近混叠边界 β_max≈24414/f0−1）",
+  "ops": [
+    {
+      "tl": 15,
+      "ar": 15,
+      "dr": 2,
+      "sl": 14,
+      "rr": 6,
+      "mult": 4,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 0,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 13,
+      "ar": 14,
+      "dr": 6,
+      "sl": 5,
+      "rr": 9,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 30,
+      "ar": 15,
+      "dr": 9,
+      "sl": 4,
+      "rr": 9,
+      "mult": 7,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 20,
+      "ar": 15,
+      "dr": 3,
+      "sl": 14,
+      "rr": 7,
+      "mult": 14,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 0,
+      "vib": 0,
+      "trem": 1
+    }
+  ],
+  "board_id": 7
+}

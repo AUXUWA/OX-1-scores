@@ -1,0 +1,53 @@
+{
+  "slug": "ambient_deep_space_4x32",
+  "name": "深空 Ambient（4 轨 × 32 步）",
+  "style": "ambient",
+  "step_ms": 260,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "弦乐群",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "长音铺底（每 8 步一个开放五度）"
+    },
+    {
+      "index": 1,
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "低音 drone（0/16 步 EGT=1 永续）"
+    },
+    {
+      "index": 2,
+      "name": "钟",
+      "patch": 7,
+      "patch_name": "钟",
+      "role": "远景点缀（每 16 步一记）"
+    },
+    {
+      "index": 3,
+      "name": "电钢琴",
+      "patch": 1,
+      "patch_name": "电钢琴",
+      "role": "高音区偶发亮色（错位）"
+    }
+  ],
+  "events": 8,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

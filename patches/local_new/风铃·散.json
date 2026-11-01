@@ -1,0 +1,69 @@
+{
+  "format": "ox1-patch-designer-presets 1",
+  "local_name": "风铃·散",
+  "algo": 7,
+  "fb": 0,
+  "percussive": true,
+  "timbre": "散、金属、风铃",
+  "desc": "algo7 环形 FM + 更深 mult（6/11）+ rr 长：风铃散落",
+  "ops": [
+    {
+      "tl": 18,
+      "ar": 15,
+      "dr": 3,
+      "sl": 13,
+      "rr": 10,
+      "mult": 6,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 15,
+      "ar": 14,
+      "dr": 6,
+      "sl": 6,
+      "rr": 10,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 28,
+      "ar": 15,
+      "dr": 9,
+      "sl": 5,
+      "rr": 10,
+      "mult": 11,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 22,
+      "ar": 15,
+      "dr": 3,
+      "sl": 13,
+      "rr": 10,
+      "mult": 14,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    }
+  ],
+  "local_id": "风铃·散",
+  "//": "本地音色（**无 board_id**，不进 patch_bank.v）—— 用它渲染时曲谱轨写 \"patch_local\": \"风铃·散\"。需 rtl 落进 patch_bank.v + 扩 preset 位宽（现 3 bit/8 套）才能上板。"
+}

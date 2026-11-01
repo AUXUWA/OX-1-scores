@@ -1,0 +1,98 @@
+{
+  "//": "与 mega60k/rtl/top/patch_bank.v 逐比特一致，勿改（真源=presets.json board_id=5，audit_presets.py --check-bank 守门）",
+  "name": "Supersaw",
+  "status": "draft",
+  "tags": [
+    "电子",
+    "领奏",
+    "中高音",
+    "持续",
+    "明亮"
+  ],
+  "desc": "algo5：op0+1→op2；载波 op[2,3]。 op3 完全独立（不加调制）。。\nop2 载波 2×(方波(奇次,无直流)) A5/D11/S0/R10 延音停在 SL 平台；op3 载波 1×(方波(奇次,无直流)) A8/D10/S4/R10 延音停在 SL 平台 颤音。\n实测：质心/f0 = 4.59、起音 13 ms、按住不衰减。\n设计意图（人手写，可能滞后于上面这几行实测参数）：algo6 反馈：锯齿载波（WF7 的各次谐波几乎等幅，是本引擎最亮的无直流载波）＋三层持续 index；FB 做合唱抖动。单声部做不出真 7 锯齿的微失谐，但能得到\"厚锯齿\"。",
+  "notes": "★ 本条的 notes 由 tools/patch_designer（fm_core.js 定点引擎）当场量出，`py tools/audit_presets.py` 可复算：\n电平：峰值 -21.9 dBFS（离 4 算子满载的结构上限 16336 还有 15.8 dB），RMS -34.5 dBFS，直流 -96 dBFS，削顶 0 个采样；\n时间：起音 13.4 ms，掉 12dB 14 ms，掉 40dB 不（按住也还在响），释音（松手后掉 40dB）21 ms，延音漂移 0.4 dB；\n频谱：质心 1008 Hz（C/f0=4.59），谐波 h1..h4 = 0/-5/-3/-9 dB，起音窗 h1..h4 = 0/-12/-7/-18 dB，落在 f0 谐波列上的能量 96%，起音比延音亮 11.8 dB；\n参数：algo5，fnum=295/block=4（A3 219.8 Hz），载波 op[2,3]；调制器 op[0,1] 的静态 TL→index 1.33/3.44 rad（实际还要再乘衰减后的 egOut）；SL=0x0F 在本引擎是**数字静音**（op_out 恒 0），SL 每低一格 ≈ +3.0 dB 延音；RR≤4 衰减极慢（实测 RR=4 要 3.5s 才到静音），4 以上才是可用释音。\n形态：持续型（载波 EGT=1，SL 段停在 SL 平台；实测按住 2s 末尾 200ms -30 dBFS，落在门禁要求的 -45..-15 区间）；客观评分：100.0/100（靶子画像「Supersaw 主音（锯齿化）」，判据见 tools/timbre_lab/profiles.js）；失分项 ",
+  "algo": 5,
+  "fb": 0,
+  "fnum": 702,
+  "block": 3,
+  "nts": 0,
+  "keyon": 1,
+  "key_on_at": 1,
+  "key_off_at": null,
+  "frames": 48000,
+  "fx": {
+    "en": 1,
+    "room": 3,
+    "damp": 6,
+    "wet": 3,
+    "spread": 1,
+    "width": 13,
+    "predelay": 0
+  },
+  "attack_ms": 13.4,
+  "carriers": [
+    2,
+    3
+  ],
+  "f0_hz": 219.79,
+  "range": "A2~A4（本条按 A3 = 219.8 Hz 设计；TL→index 与 SL 都与音高无关，所以换八度不用重调，但 index 越大、f0 越高越接近混叠边界 β_max≈24414/f0−1）",
+  "ops": [
+    {
+      "tl": 26,
+      "ar": 11,
+      "dr": 9,
+      "sl": 6,
+      "rr": 8,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 22,
+      "ar": 11,
+      "dr": 9,
+      "sl": 6,
+      "rr": 8,
+      "mult": 2,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 8,
+      "ar": 9,
+      "dr": 9,
+      "sl": 5,
+      "rr": 8,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 6,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 18,
+      "ar": 9,
+      "dr": 9,
+      "sl": 5,
+      "rr": 8,
+      "mult": 2,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 6,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    }
+  ],
+  "board_id": 5
+}

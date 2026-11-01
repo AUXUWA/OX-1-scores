@@ -1,0 +1,53 @@
+{
+  "slug": "demo_camfg_4x32",
+  "name": "C–Am–F–G 4 轨演示曲",
+  "style": "demo",
+  "step_ms": 120,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "电钢",
+      "patch": 1,
+      "patch_name": "电钢琴",
+      "role": "和弦伴奏（位图多键）"
+    },
+    {
+      "index": 1,
+      "name": "弦乐",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "根音铺底"
+    },
+    {
+      "index": 2,
+      "name": "贝斯",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "低音 16 分律动"
+    },
+    {
+      "index": 3,
+      "name": "主奏",
+      "patch": 5,
+      "patch_name": "Supersaw",
+      "role": "主旋律"
+    }
+  ],
+  "events": 32,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "china_moli_var_4x32",
+  "name": "茉莉变奏（4 轨 × 32 步）",
+  "style": "china",
+  "step_ms": 180,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "index": 0,
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "五度 drone（0/16 长门）"
+    },
+    {
+      "index": 1,
+      "name": "弦乐群",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "主句（茉莉头句变奏）"
+    },
+    {
+      "index": 2,
+      "name": "拨弦",
+      "patch": 2,
+      "patch_name": "拨弦",
+      "role": "五声琶音对位（碎点）"
+    },
+    {
+      "index": 3,
+      "name": "钟",
+      "patch": 7,
+      "patch_name": "钟",
+      "role": "板眼（0/8/16/24 轻点）"
+    }
+  ],
+  "events": 14,
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "files": [
+    "score.txt",
+    "score.json",
+    "score.hex",
+    "score.bin",
+    "preview.wav",
+    "meta.json",
+    "README.md"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "format": "ox1-patch-designer-presets 1",
+  "local_name": "金属·雨滴",
+  "algo": 3,
+  "fb": 0,
+  "percussive": true,
+  "timbre": "金属、细密、像雨滴打铁皮",
+  "desc": "algo3 树形 + 高 mult（5/3/7）+ rr 拉长：金属雨滴，泛音族密但不刺",
+  "ops": [
+    {
+      "tl": 22,
+      "ar": 15,
+      "dr": 6,
+      "sl": 9,
+      "rr": 11,
+      "mult": 5,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 26,
+      "ar": 15,
+      "dr": 7,
+      "sl": 9,
+      "rr": 11,
+      "mult": 3,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 26,
+      "ar": 15,
+      "dr": 7,
+      "sl": 9,
+      "rr": 11,
+      "mult": 7,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    },
+    {
+      "tl": 12,
+      "ar": 15,
+      "dr": 6,
+      "sl": 9,
+      "rr": 11,
+      "mult": 1,
+      "ksl": 0,
+      "ksr": 0,
+      "wf": 0,
+      "egt": 1,
+      "vib": 0,
+      "trem": 1
+    }
+  ],
+  "local_id": "金属·雨滴",
+  "//": "本地音色（**无 board_id**，不进 patch_bank.v）—— 用它渲染时曲谱轨写 \"patch_local\": \"金属·雨滴\"。需 rtl 落进 patch_bank.v + 扩 preset 位宽（现 3 bit/8 套）才能上板。"
+}
