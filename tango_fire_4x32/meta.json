@@ -1,0 +1,49 @@
+{
+  "slug": "tango_fire_4x32",
+  "name": "探戈 · 烈焰",
+  "style": "探戈",
+  "mood": "火把、决斗、心跳",
+  "key": "A 小调（Am–Dm–E7–Am，每 8 步 = 半小节一换）",
+  "step_ms": 150,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "name": "弦乐群",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "主旋律（断奏跳进）"
+    },
+    {
+      "name": "拨弦",
+      "patch": 2,
+      "patch_name": "拨弦",
+      "role": "班多纽按钮（反拍双音）"
+    },
+    {
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "低音（根音-五音）"
+    },
+    {
+      "name": "金属打击",
+      "patch": 3,
+      "patch_name": "金属打击·树形",
+      "role": "打击（正拍底鼓 + 反拍军鼓）"
+    }
+  ],
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "duration_s": 6.8,
+  "peak": 11311.5,
+  "peak_dbfs": -9.24,
+  "rms_dbfs": -23.5,
+  "wav_bytes": 1328140,
+  "wav_md5": "b184d4a6facf073fd47a286073bd4536",
+  "n_events": 461,
+  "clipped_samples": 0
+}

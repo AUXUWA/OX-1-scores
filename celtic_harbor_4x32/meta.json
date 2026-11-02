@@ -1,0 +1,49 @@
+{
+  "slug": "celtic_harbor_4x32",
+  "name": "凯尔特海港",
+  "style": "凯尔特",
+  "mood": "海风、竖琴、远方",
+  "key": "D 多利亚（Dm–G–Dm–C，每 8 步 = 半小节一换）",
+  "step_ms": 125,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "name": "羽管键琴",
+      "patch": 0,
+      "patch_name": "羽管键琴",
+      "role": "竖琴滚奏（十六分音符）"
+    },
+    {
+      "name": "弦乐群",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "小提琴主奏（D 多利亚）"
+    },
+    {
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "持续低音（drone，每 4 步重触）"
+    },
+    {
+      "name": "钟",
+      "patch": 7,
+      "patch_name": "钟",
+      "role": "远处钟声"
+    }
+  ],
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "duration_s": 6.0,
+  "peak": 10925.5,
+  "peak_dbfs": -9.54,
+  "rms_dbfs": -23.92,
+  "wav_bytes": 1171980,
+  "wav_md5": "b3cbb5dedb4bda086efa91cc32c877c6",
+  "n_events": 348,
+  "clipped_samples": 0
+}

@@ -1,0 +1,49 @@
+{
+  "slug": "chiptune_arcade_4x32",
+  "name": "芯片街机",
+  "style": "电子 8-bit",
+  "mood": "街机、怀旧、蹦跳",
+  "key": "A 小调（Am–F–C–G，每 8 步 = 半小节一换）",
+  "step_ms": 100,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "name": "Supersaw",
+      "patch": 5,
+      "patch_name": "Supersaw",
+      "role": "主奏（方波味钩子，八分音符）"
+    },
+    {
+      "name": "羽管键琴",
+      "patch": 0,
+      "patch_name": "羽管键琴",
+      "role": "琶音（十六分音符滚奏）"
+    },
+    {
+      "name": "拨弦",
+      "patch": 2,
+      "patch_name": "拨弦",
+      "role": "脉冲贝斯（根音-五音，八分音符）"
+    },
+    {
+      "name": "金属打击",
+      "patch": 3,
+      "patch_name": "金属打击·树形",
+      "role": "噪声鼓组（底鼓/军鼓/hi-hat）"
+    }
+  ],
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "duration_s": 5.2,
+  "peak": 8884.5,
+  "peak_dbfs": -11.34,
+  "rms_dbfs": -28.86,
+  "wav_bytes": 1015692,
+  "wav_md5": "172e8219a260f0e49ee798425b973f22",
+  "n_events": 484,
+  "clipped_samples": 0
+}

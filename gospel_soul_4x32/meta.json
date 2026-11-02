@@ -1,0 +1,49 @@
+{
+  "slug": "gospel_soul_4x32",
+  "name": "福音之光",
+  "style": "福音 Soul",
+  "mood": "教堂、合唱、温暖",
+  "key": "C 大调（C–Am–F–G，每 8 步 = 半小节一换）",
+  "step_ms": 165,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "Hammond 和弦（正拍 + 反拍加花）"
+    },
+    {
+      "name": "弦乐群",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "合唱团（长音，只换不切）"
+    },
+    {
+      "name": "拨弦",
+      "patch": 2,
+      "patch_name": "拨弦",
+      "role": "行走低音（八分音符）"
+    },
+    {
+      "name": "金属打击",
+      "patch": 3,
+      "patch_name": "金属打击·树形",
+      "role": "手鼓 + 底鼓"
+    }
+  ],
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "duration_s": 7.28,
+  "peak": 16635.5,
+  "peak_dbfs": -5.89,
+  "rms_dbfs": -21.44,
+  "wav_bytes": 1421964,
+  "wav_md5": "f5a9460cad6988d54b27cbb87c6476d4",
+  "n_events": 407,
+  "clipped_samples": 0
+}

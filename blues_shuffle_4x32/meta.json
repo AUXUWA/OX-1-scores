@@ -1,0 +1,49 @@
+{
+  "slug": "blues_shuffle_4x32",
+  "name": "午夜蓝调",
+  "style": "布鲁斯 Shuffle",
+  "mood": "深夜、烟、酒杯",
+  "key": "A 布鲁斯（两小节：A7 一小节 + D7 一小节）",
+  "step_ms": 150,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "name": "拨弦",
+      "patch": 2,
+      "patch_name": "拨弦",
+      "role": "吉他 riff（切分）"
+    },
+    {
+      "name": "电钢琴",
+      "patch": 1,
+      "patch_name": "电钢琴",
+      "role": "七和弦 comping（2、4 拍）"
+    },
+    {
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "低音（根音-五音-七音走动）"
+    },
+    {
+      "name": "金属打击",
+      "patch": 3,
+      "patch_name": "金属打击·树形",
+      "role": "底鼓 + 扫军鼓 + hi-hat"
+    }
+  ],
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "duration_s": 6.8,
+  "peak": 10508.5,
+  "peak_dbfs": -9.88,
+  "rms_dbfs": -28.4,
+  "wav_bytes": 1328140,
+  "wav_md5": "92b12db763f0d8981d2a7fcf7efbcf1c",
+  "n_events": 359,
+  "clipped_samples": 0
+}

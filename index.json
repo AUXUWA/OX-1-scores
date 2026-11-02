@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "generated": "2026-11-01T16:53:58+08:00",
+  "generated": "2026-11-02T23:25:50+08:00",
   "base": "https://fastly.jsdelivr.net/gh/AUXUWA/OX-1-scores/",
   "songs": [
     {
@@ -136,6 +136,39 @@
       "notes": 33
     },
     {
+      "file": "celtic_harbor_4x32/score.txt",
+      "dir": "celtic_harbor_4x32/",
+      "name": "凯尔特海港（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 32,
+      "notes": 60
+    },
+    {
+      "file": "bossa_sol_4x32/score.txt",
+      "dir": "bossa_sol_4x32/",
+      "name": "午后波萨（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 27,
+      "notes": 75
+    },
+    {
+      "file": "blues_shuffle_4x32/score.txt",
+      "dir": "blues_shuffle_4x32/",
+      "name": "午夜蓝调（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 16,
+      "notes": 57
+    },
+    {
       "file": "waltz_danube_4x32/score.txt",
       "dir": "waltz_danube_4x32/",
       "name": "多瑙河圆舞曲风（4 轨 × 32 步）",
@@ -178,6 +211,17 @@
       "total_steps": 32,
       "events": 16,
       "notes": 24
+    },
+    {
+      "file": "tango_fire_4x32/score.txt",
+      "dir": "tango_fire_4x32/",
+      "name": "探戈 · 烈焰（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 32,
+      "notes": 87
     },
     {
       "file": "pop_funk_4x32/score.txt",
@@ -235,6 +279,17 @@
       "notes": 53
     },
     {
+      "file": "gospel_soul_4x32/score.txt",
+      "dir": "gospel_soul_4x32/",
+      "name": "福音之光（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 16,
+      "notes": 63
+    },
+    {
       "file": "orchestral_4x32/score.txt",
       "dir": "orchestral_4x32/",
       "name": "管弦 Orchestral（4 轨 × 32 步）",
@@ -244,6 +299,17 @@
       "total_steps": 32,
       "events": 16,
       "notes": 29
+    },
+    {
+      "file": "chiptune_arcade_4x32/score.txt",
+      "dir": "chiptune_arcade_4x32/",
+      "name": "芯片街机（4 轨 × 32 步）",
+      "group": "四轨合奏",
+      "preset": null,
+      "note": "32 步",
+      "total_steps": 32,
+      "events": 32,
+      "notes": 96
     },
     {
       "file": "china_moli_var_4x32/score.txt",

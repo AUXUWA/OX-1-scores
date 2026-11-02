@@ -1,0 +1,49 @@
+{
+  "slug": "bossa_sol_4x32",
+  "name": "午后波萨",
+  "style": "拉丁 Bossa",
+  "mood": "阳光、沙滩、微风",
+  "key": "C 大调 ii–V–I 色彩（Cmaj7–Am7–Dm7–G7，每 8 步 = 半小节一换）",
+  "step_ms": 130,
+  "loop": 1,
+  "total_steps": 32,
+  "tracks": [
+    {
+      "name": "弦乐群",
+      "patch": 6,
+      "patch_name": "弦乐群",
+      "role": "主旋律（连音 + 切分）"
+    },
+    {
+      "name": "电钢琴",
+      "patch": 1,
+      "patch_name": "电钢琴",
+      "role": "Rhodes 反拍和弦"
+    },
+    {
+      "name": "管风琴",
+      "patch": 4,
+      "patch_name": "管风琴",
+      "role": "低音（根音 + 五音）"
+    },
+    {
+      "name": "金属打击",
+      "patch": 3,
+      "patch_name": "金属打击·树形",
+      "role": "沙锤 / 边鼓 / 打击木"
+    }
+  ],
+  "renderer": "tools/render_multitrack.py",
+  "rate": 48828,
+  "bits": 16,
+  "channels": 2,
+  "patch_bank_ref": "mega60k/rtl/top/patch_bank.v",
+  "duration_s": 6.16,
+  "peak": 11664.0,
+  "peak_dbfs": -8.97,
+  "rms_dbfs": -23.22,
+  "wav_bytes": 1203212,
+  "wav_md5": "8d94d618964defd03042a0fcd124716f",
+  "n_events": 430,
+  "clipped_samples": 0
+}
