@@ -153,6 +153,29 @@ App 拉取时按这个顺序试（2026-11-01 本机实测；`raw.githubuserconte
 > 速度与 jsDelivr 同量级（`index.json` 各 3 次：Pages 0.71/0.76/1.43 s vs jsDelivr 0.76/1.05/1.75 s）。
 > ★ 例外：`preview.wav` 单首约 1.3 MB，Pages 实测 **25 s** ⇒ App 试听必须懒加载，不要默认下载。
 >
+> ★ **2026-11-02 复测（t44 批发布后）**：公开仓已含 **v2 / 32 首**（新增 6 首：芯片街机 /
+> 探戈·烈焰 / 午后波萨 / 凯尔特海港 / 福音之光 / 午夜蓝调），实测
+> `index.json` 200（v2/32）· 6 首 `score.txt` 按 **App 的拼法** `base + file` 全部 200
+> · `score.bin`/`score.hex`/`meta.json` 各 6 个 sha256 与本地**逐字节相同**
+> · 6 个 `preview.wav` 的 `Content-Length` 与本地**完全一致**。
+> ⇒ 上面的 13/26 首对照表是 **2026-11-01 那次实测的历史记录**（保留原样，不回改）。
+>
+> ★ **发布流程（一条命令，勿手工复制）**：本仓 `scores/` 是唯一真值，公开仓是它的**镜像**：
+>
+> ```bash
+> py tools/publish_scores.py                        # dry-run：只报告增/改/删
+> py tools/publish_scores.py --apply                # 真同步（镜像语义 + 幂等复扫）
+> py tools/publish_scores.py --apply --commit "…" --push   # 同步 + 提交 + 推公开仓
+> ```
+>
+> 镜像语义：公开仓里**多出来的文件会被删除**；`.gitattributes`（`* -text`，保证推送不改行尾）
+> 与 `.nojekyll`（Pages 按字节直出）是**目标仓自有基础设施**，脚本每次自愈补回
+> —— 2026-11-01 踩过两次"被当多余文件删掉"的坑。
+>
+> ⚠ **别分两次跑**：先 `--apply` 再 `--apply --commit --push` ⇒ 第二次发现"无差异"就
+> **提前返回、什么都不提交也不推**（消息是「已同步，无需动作」，看着像成功）。
+> ⇒ 要提交就**一次带齐** `--apply --commit "…" --push`。
+>
 > ⇒ App 的 index 拉取顺序应为：**Pages 首选** → fastly → gcore → testingcf → raw（兜底）；
 > 曲谱/音色**内容文件仍走 `base`（jsDelivr）**，因为它路径新、不受分支缓存影响。
 > ⚠ Pages 首次构建踩过：`pages/builds/latest` 报 `status=building` 且 `duration=0` 卡了 25 分钟，
